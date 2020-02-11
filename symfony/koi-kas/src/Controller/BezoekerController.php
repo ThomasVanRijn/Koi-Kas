@@ -24,7 +24,7 @@ class BezoekerController extends AbstractController
     }
 
     /**
-     * @Route("/koi-dokter", name="koi-dokter"
+     * @Route("/koi-dokter", name="koi-dokter")
      */
     public function koiDokter() {
         return $this->render("bezoeker/koi-dokter.html.twig");
