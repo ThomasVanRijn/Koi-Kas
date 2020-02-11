@@ -1,12 +1,275 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1186cccd-033d-4a32-b0aa-b0a8f48b6b20" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/BezoekerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/aanbieding.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/contact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/het-bedrijf.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/home.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/japan-reizen.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/kadobon.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/koi-dokter.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/koi-info.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/koi-te-koop.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/links.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/producten.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/vijvers.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/Website (new).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/css/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/css/feather.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/css/flickity-fade.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/css/flickity.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/css/jquery.fancybox.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/css/simplebar.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/css/theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/css/vs2015.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Bold Italic font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Bold font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Book Italic font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Book font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Extra Black font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Heavy Italic font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Heavy font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Light Italic font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Light font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Medium Italic font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura XBlk BT.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura-CondensedLight.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/futur.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/futura light bt.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/futura medium bt.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/futura medium condensed bt.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/sharefonts.net.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/tt0205m_.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/unicode.futurab.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/unicode.futurabb.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/cover-25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-121.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/product-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/adidas.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/amex.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/asos.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/bershka.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/canada.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/germany.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/klarna.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/maestro.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/mango.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/mastercard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/paypal.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/reebok.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/stradivarius.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/usa.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/visa.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/zara.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/test-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/orm-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1XeqfWS5RwgWXuSBAfy8k309JsW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1186cccd-033d-4a32-b0aa-b0a8f48b6b20" name="Default Changelist" comment="" />
+      <created>1581417011722</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581417011722</updated>
+      <workItem from="1581417012956" duration="1136000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1168" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581417977270">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1168" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581417977270" />
+    <state x="710" y="335" key="NewPhpClassDialog" timestamp="1581417712366">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="710" y="335" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581417712366" />
   </component>
 </project>
