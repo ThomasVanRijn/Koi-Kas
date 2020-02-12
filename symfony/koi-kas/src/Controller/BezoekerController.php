@@ -17,13 +17,6 @@ class BezoekerController extends AbstractController
     }
 
     /**
-     * @Route("/producten", name="producten")
-     */
-    public function producten() {
-    return $this->render("bezoeker/producten.html.twig");
-    }
-
-    /**
      * @Route("/koi-dokter", name="koi-dokter")
      */
     public function koiDokter() {
@@ -101,6 +94,14 @@ class BezoekerController extends AbstractController
     public function links() {
         return $this->render("bezoeker/links.html.twig");
     }
+
+    /**
+     * @Route("/producten", name="producten")
+     */
+    public function producten() {
+        return $this->render("bezoeker/producten.html.twig");
+    }
+
 
 
 
