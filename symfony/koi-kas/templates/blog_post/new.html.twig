@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New BlogPost{% endblock %}
+
+{% block main %}
+    <h1>Create new BlogPost</h1>
+
+    {{ form_start(form) }}
+    {% for images in form.images %}
+    {{form_errors(images)}}
+    {{ form_widget(images)}}
+    {% endfor %}
+
+    <button onclick="{{ form_errors(images) }}, {{ form_widget(images) }}"> klik</button>
+    {{ form_end(form)}}
+
+    <a href="{{ path('blog_post_index') }}">back to list</a>
+{% endblock %}

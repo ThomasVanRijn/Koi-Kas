@@ -101,12 +101,7 @@ class BezoekerController extends AbstractController
         return $this->render("bezoeker/links.html.twig");
     }
 
-    /**
-     * @Route("/producten", name="producten")
-     */
-    public function producten() {
-        return $this->render("bezoeker/producten.html.twig");
-    }
+
 
     /**
      * @Route("/login", name="app_login")
@@ -134,7 +129,7 @@ class BezoekerController extends AbstractController
     }
 
     /**
-     * @Route("/user")
+     * @Route("/user/new")
      */
     public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {

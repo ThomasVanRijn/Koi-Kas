@@ -17,12 +17,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProductenController extends AbstractController
 {
 
-
-
     /**
      * @Route("/{id}", name="product")
      */
-    public function producten($id) {
+
+    public function product($id) {
         $em = $this->getDoctrine()->getManager();
         $producten = $em->getRepository(Categorie::class)->findBy([
             'naam' => $id
@@ -33,6 +32,14 @@ class ProductenController extends AbstractController
         return $this->render('bezoeker/producten.html.twig', [
             'producten' => $product
         ]);
+    }
+
+    /**
+     * @Route("/producten", name="producten")
+     */
+
+    public function producten() {
+        return $this->render("bezoeker/producten.html.twig");
     }
 
 
