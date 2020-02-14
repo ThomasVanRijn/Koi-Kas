@@ -6,6 +6,8 @@ use App\Entity\BlogPost;
 use App\Form\Type\ImageType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
@@ -19,10 +21,9 @@ class BlogPost1Type extends AbstractType
     {
         $builder
             ->add('naam', TextType::class)
-            ->add('verhaal', TextType::class)
-            ->add('images', CollectionType::class, [
-                'entry_type' => EmailType::class
-            ])
+            ->add('verhaal', TextareaType::class)
+            ->add('gaan', SubmitType::class)
+
         ;
     }
 

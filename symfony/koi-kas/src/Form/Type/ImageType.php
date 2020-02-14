@@ -4,6 +4,8 @@
 namespace App\Form\Type;
 
 
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -15,8 +17,23 @@ class ImageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('naam', TextType::class)
+            ->add('hoogte', ChoiceType::class, [
+                'choices' => [
+                    'groot' => '45vh',
+                    'middel' => '25vh',
+                    'klein' => '15vh'
+                ]
+            ])
+            ->add('breedte', ChoiceType::class, [
+                'choices' => [
+                    'groot' => "45%",
+                    'middel' => "25%",
+                    'klein' => "15%",
+                ]
+            ])
             ->add('image_file_name', FileType::class, [
-                'label' => 'Outfit image',
+                'label' => 'foto',
 
                 // unmapped means that this field is not associated to any entity property
                 'mapped' => false,

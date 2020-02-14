@@ -2,84 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1186cccd-033d-4a32-b0aa-b0a8f48b6b20" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.idea/Website (new).iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/css/all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/css/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/css/feather.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/css/flickity-fade.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/css/flickity.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/css/jquery.fancybox.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/css/simplebar.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/css/theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/css/vs2015.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Bold Italic font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Bold font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Book Italic font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Book font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Extra Black font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Heavy Italic font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Heavy font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Light Italic font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Light font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura Medium Italic font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura XBlk BT.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/Futura-CondensedLight.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/futur.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/futura light bt.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/futura medium bt.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/futura medium condensed bt.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/sharefonts.net.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/tt0205m_.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/unicode.futurab.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/fonts/futura/unicode.futurabb.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/cover-25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-110.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-120.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-121.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-122.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-123.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-124.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/product-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/adidas.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/amex.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/asos.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/bershka.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/canada.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/germany.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/klarna.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/maestro.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/mango.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/mastercard.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/paypal.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/reebok.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/stradivarius.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/usa.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/visa.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../assets/img/svg/zara.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/Oefenen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ImageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200214084310.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200214092321.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ImageRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/foto.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/test.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/image/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/image/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/image/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/image/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/image/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/image/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProductenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Type/BlogPost1Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Type/BlogPost1Type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Type/ImageType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Type/ImageType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog_post/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog_post/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog_post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog_post/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +36,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -217,10 +169,14 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PassFD" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\src\Form\Type" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\public\img" />
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\public\css" />
@@ -249,7 +205,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581417011722</updated>
       <workItem from="1581417012956" duration="4635000" />
-      <workItem from="1581422244248" duration="10971000" />
+      <workItem from="1581422244248" duration="30780000" />
     </task>
     <servers />
   </component>
@@ -260,18 +216,34 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1032" y="183" key="#Inspections" timestamp="1581669890420">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1032" y="183" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1581669890420" />
+    <state x="552" y="179" key="#Intentions" timestamp="1581671712201">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Intentions/0.0.1920.1040@0.0.1920.1040" timestamp="1581671712201" />
     <state x="1168" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581417977270">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1168" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581417977270" />
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1581421671390">
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581670534347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581421671390" />
-    <state x="710" y="335" key="NewPhpClassDialog" timestamp="1581496371437">
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581670534347" />
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1581669670409">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="710" y="335" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581496371437" />
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581669670409" />
+    <state x="672" y="237" key="MultipleFileMergeDialog" timestamp="1581582583576">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="672" y="237" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581582583576" />
+    <state x="710" y="335" key="NewPhpClassDialog" timestamp="1581593474374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="710" y="335" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581593474374" />
     <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581582473792">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

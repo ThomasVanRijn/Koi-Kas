@@ -5,7 +5,9 @@ namespace App\Controller;
 
 
 
+use App\Entity\Image;
 use App\Entity\User;
+use App\Form\Type\ImageType;
 use App\Form\UserType;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -98,6 +100,42 @@ class AdminController extends AbstractController
         }
 
         return $this->redirectToRoute('user_index');
+    }
+
+    /**
+     * @Route("/image/new", name="new_image")
+     */
+    public function newImage(Request $request) {
+        $em = $this->getDoctrine()->getManager();
+
+        $image = new Image();
+
+        $form = $this->createForm(ImageType::class, $image);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()) {
+            $imageFile = $form->get('image_file_name')->getData();
+            if($imageFile) {
+                $uri = $image->setUri($imageFile);
+            }
+            $image = $form->getData();
+            $em->persist($image);
+            $em->flush();
+
+            return $this->redirectToRoute('homepage');
+        }
+
+        $img = $em->getRepository(Image::class)->find(1);
+        $img->setString($img->getBreedte(), $img->getHoogte(), $img->getUri());
+        //dd($img->getString());
+        return $this->render('admin/foto.html.twig', [ "form" => $form->createView()]);
+    }
+
+    /**
+     * @Route("/test", name="test")
+     */
+
+    public function test() {
+        return $this->render('admin/test.html.twig');
     }
 
 }

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Image{% endblock %}
+
+{% block body %}
+    <h1>Image</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ image.id }}</td>
+            </tr>
+            <tr>
+                <th>Naam</th>
+                <td>{{ image.naam }}</td>
+            </tr>
+            <tr>
+                <th>Uri</th>
+                <td>{{ image.uri }}</td>
+            </tr>
+            <tr>
+                <th>Hoogte</th>
+                <td>{{ image.hoogte }}</td>
+            </tr>
+            <tr>
+                <th>Breedte</th>
+                <td>{{ image.breedte }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('image_index') }}">back to list</a>
+
+    <a href="{{ path('image_edit', {'id': image.id}) }}">edit</a>
+
+    {{ include('image/_delete_form.html.twig') }}
+{% endblock %}
