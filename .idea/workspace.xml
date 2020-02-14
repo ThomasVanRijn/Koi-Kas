@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bf43fbf-b8ca-488a-91ef-74bae1c414d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/producten.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/producten.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -57,14 +56,35 @@
       <workItem from="1581251486673" duration="12000" />
       <workItem from="1581272820679" duration="2529000" />
       <workItem from="1581345458247" duration="1329000" />
-      <workItem from="1581502071293" duration="6193000" />
+      <workItem from="1581502071293" duration="10539000" />
+      <workItem from="1581591570522" duration="3197000" />
     </task>
+    <task id="LOCAL-00001" summary="responsive">
+      <created>1581508583572</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581508583573</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="responsive" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581508582540">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581508582540" />
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1581591567101">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581591567101" />
     <state x="184" y="92" key="MergeDialog" timestamp="1581508556986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -73,9 +93,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="237" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581508557008" />
-    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581508536827">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1581508588212">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581508536827" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581508588211" />
+    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581665574682">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581665574682" />
   </component>
 </project>

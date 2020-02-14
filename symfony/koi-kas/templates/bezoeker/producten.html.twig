@@ -32,270 +32,148 @@
 
 {% block main %}
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container">
+    <div class="container">
 
-            <!-- Brand -->
-            <a class="navbar-brand" href="index.html">
-                Koi Kas
-            </a>
+        <!-- Header -->
+        <div class="row align-items-center mb-7">
+            <div class="col-12 col-md">
 
-            <!-- Toggler -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Heading -->
+                <h3 class="mb-1">Pompen</h3>
 
-            <!-- Collapse -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-
-                <!-- Nav -->
-                <ul class="navbar-nav mx-auto">
-                    <!-- home -->
-                    <li class="nav-item dropdown">
-
-                        <!-- Toggle -->
-                        <a class="nav-link" data-toggle="dropdown" href="{{ path('homepage') }}">Home</a>
-
+                <!-- Breadcrumb -->
+                <ol class="breadcrumb mb-md-0 font-size-xs text-gray-400">
+                    <li class="breadcrumb-item">
+                        <a class="text-gray-400" href="index.html">Home</a>
                     </li>
-
-                    <li class="nav-item dropdown position-static">
-
-                        <!-- Toggle -->
-                        <a class="nav-link" data-toggle="dropdown" href="producten.html">Producten</a>
-
-                        <!-- Menu -->
-                        <div class="dropdown-menu w-100">
-
-                            <!-- Tabs -->
-                            <form class="mb-2 mb-lg-0 border-bottom-lg">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-12">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-
-                            <!-- Tab content -->
-                            <div class="card card-lg">
-                                <div class="card-body">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade show active" id="navTab">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-6 col-md">
-                                                        <!-- Links -->
-                                                        <ul class="list-styled mb-6 mb-md-0 font-size-sm">
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'pompen'}) }}">
-                                                                    Pompen
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'filter'}) }}">
-                                                                    Filters
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'filter materialen'}) }}">
-                                                                    Filter materialen
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'folie'}) }}">
-                                                                    Folie
-                                                                </a>
-                                                            </li>
-
-                                                        </ul>
-
-                                                    </div>
-                                                    <div class="col-6 col-md">
-
-                                                        <!-- Links -->
-                                                        <ul class="list-styled mb-6 mb-md-0 font-size-sm">
-
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'verlichting'}) }}">
-                                                                    Verlichting
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'verwarming'}) }}">
-                                                                    Verwarming
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'accesoires'}) }}">
-                                                                    Accesoires
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'voer'}) }}">
-                                                                    Voer
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-
-                                                    </div>
-                                                    <div class="col-6 col-md">
-
-
-                                                        <!-- Links -->
-                                                        <ul class="list-styled mb-0 font-size-sm">
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'medicijnen'}) }}">
-                                                                    Medicijnen
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'waterconditie'}) }}">
-                                                                    Waterconditie
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'gebruikt'}) }}">
-                                                                    Gebruikt/showmodellen
-                                                                </a>
-                                                            </li>
-                                                            <li class="list-styled-item">
-                                                                <a class="list-styled-link"
-                                                                   href="{{ path('product', {id:'catalogus'}) }}">
-                                                                    CatalogusMessner
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-
-                                                    </div>
-
-                                                    <div class="col-4 d-none d-lg-block">
-
-                                                        <!-- Card -->
-                                                        <div class="card">
-
-                                                            <!-- Image -->
-                                                            <img class="card-img" src=".{{ asset("img/download.jpg") }}"
-                                                                 alt="...">
-
-                                                            <!-- Overlay -->
-                                                            <div class="card-img-overlay bg-dark-0 bg-hover align-items-center">
-                                                                <div class="text-center">
-                                                                    <a class="btn btn-white stretched-link"
-                                                                       href="{{path('producten')}}">
-                                                                        Alle producten <i class="fe fe-arrow-right ml-2"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
+                    <li class="breadcrumb-item active">
+                        Pompen
                     </li>
-                    <li class="nav-item dropdown">
-
-                        <!-- Toggle -->
-                        <a class="nav-link" data-toggle="dropdown" href="https://yevgenysim.github.io/shopper/index.html#">Blog</a>
-
-                        <!-- Menu -->
-                        <div class="dropdown-menu">
-                            <div class="card card-lg">
-                                <div class="card-body">
-                                    <ul class="list-styled font-size-sm">
-                                        <li class="list-styled-item">
-                                            <a class="list-styled-link"
-                                               href="https://yevgenysim.github.io/shopper/blog.html">Blog</a>
-                                        </li>
-                                        {% if is_granted('ROLE_ADMIN') %}
-                                            <li class="list-styled-item">
-                                                <a class="list-styled-link"
-                                                   href="https://yevgenysim.github.io/shopper/blog-post.html">Blog Post Toevoegen</a>
-                                            </li>
-                                        {% endif %}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="https://yevgenysim.github.io/shopper/docs/getting-started.html">Contact</a>
-                    </li>
-                </ul>
-
-                <!-- Nav -->
-                <ul class="navbar-nav flex-row">
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal"
-                           href="https://yevgenysim.github.io/shopper/index.html#modalSearch">
-                            <i class="fas fa-search"></i>
-                        </a>
-                    </li>
-                </ul>
+                </ol>
 
             </div>
+            <div class="col-12 col-md-auto">
 
+{#                <!-- Select -->#}
+{#                <select class="custom-select custom-select-xs">#}
+{#                    <option selected="">Most popular</option>#}
+{#                </select>#}
+
+            </div>
         </div>
-    </nav>
 
+        <!-- Products -->
+        <div class="row">
+            <div class="col-6 col-md-4">
 
-    <!-- CATEGORIES -->
-    <section>
-        <div class="container-fluid">
-            <div class="mx-auto row no-gutters d-block d-lg-flex flickity flickity-lg-none"
-                 data-flickity="{&quot;watchCSS&quot;: true}">
-                {% for product in producten %}
-                    <!-- Item -->
-                    <div class=" mx-auto col-lg-3 col-xs-10 d-flex flex-column bg-cover"
-                         style="background-image: url({{ product.image }}); margin-top: 4vh; margin-bottom: 4vh">
-                        <div class="card bg-dark-5 bg-hover text-white text-center" style="min-height: 470px;">
-                            <div class="card-body mt-auto mb-n11 py-8">
+                <!-- Card -->
+                <div class="card mb-7">
 
-                                <!-- Heading -->
-                                <h1 class="mb-0 font-weight-bolder">
-                                    {{ product.naam }}
-                                </h1>
-
-                            </div>
-                            <div class="card-body mt-auto py-8">
-
-                                <!-- Button -->
-                                <a class="btn btn-white stretched-link" href="#">
-                                    dolor sit <i class="fas fa-arrow-right"></i>
-                                </a>
-
-                            </div>
-                        </div>
+                    <!-- Badge -->
+                    <div class="badge badge-white card-badge card-badge-left text-uppercase">
+                        New
                     </div>
-                {% endfor %}
+
+                    <!-- Image -->
+                    <div class="card-img">
+
+                        <!-- Image -->
+                        <a class="card-img-hover" href="#">
+                            <img class="card-img-top card-img-back" src="https://via.placeholder.com/250" alt="...">
+                            <img class="card-img-top card-img-front" src="https://via.placeholder.com/300" alt="...">
+                        </a>
+
+                        <!-- Actions -->
+                        <div class="card-actions">
+                      <span class="card-action">
+                        <button class="btn btn-xs btn-circle btn-white-primary" data-toggle="modal"
+                                data-target="#modalProduct">
+                          <i class="fe fe-eye"></i>
+                        </button>
+                      </span>
+                            <span class="card-action">
+                        <button class="btn btn-xs btn-circle btn-white-primary" data-toggle="button">
+                          <i class="fe fe-shopping-cart"></i>
+                        </button>
+                      </span>
+                            <span class="card-action">
+                        <button class="btn btn-xs btn-circle btn-white-primary" data-toggle="button">
+                          <i class="fe fe-heart"></i>
+                        </button>
+                      </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Body -->
+                    <div class="card-body px-0">
+
+                        <!-- Category -->
+                        <div class="font-size-xs">
+                            <a class="text-muted" href="shop.html">Shoes</a>
+                        </div>
+
+                        <!-- Title -->
+                        <div class="font-weight-bold">
+                            <a class="text-body" href="product.html">
+                                Leather mid-heel Sandals
+                            </a>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="font-weight-bold text-muted">
+                            $129.00
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-6 col-md-4">
+
+                <!-- Card -->
+                <div class="card mb-7">
+
+                    <!-- Badge -->
+                    <div class="badge badge-dark card-badge card-badge-left text-uppercase">
+                        Sale
+                    </div>
+
+                    <!-- Image -->
+                    <a class="card-img-hover" href="#">
+                        <img class="card-img-top card-img-back" src="https://via.placeholder.com/250" alt="...">
+                        <img class="card-img-top card-img-front" src="https://via.placeholder.com/300" alt="...">
+                    </a>
+
+                    <!-- Body -->
+                    <div class="card-body px-0">
+
+                        <!-- Category -->
+                        <div class="font-size-xs">
+                            <a class="text-muted" href="shop.html">Bags</a>
+                        </div>
+
+                        <!-- Title -->
+                        <div class="font-weight-bold">
+                            <a class="text-body" href="product.html">
+                                Suede cross body Bag
+                            </a>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="font-weight-bold">
+                            <span class="font-size-xs text-gray-350 text-decoration-line-through">$79.00</span>
+                            <span class="text-primary">$49.00</span>
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
         </div>
-    </section>
+
+    </div>
 
 {% endblock %}
