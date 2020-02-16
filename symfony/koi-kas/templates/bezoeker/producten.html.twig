@@ -29,150 +29,35 @@
     <!-- <script type="text/javascript" async="" src="./Shopper_files/analytics.js.download"></script> -->
     <!-- <script async="" src="./Shopper_files/js"></script> -->
 {% endblock %}
-
 {% block main %}
+    <div class="container-fluid">
+    <div class="mx-auto row no-gutters d-block d-lg-flex flickity flickity-lg-none"
+         data-flickity="{&quot;watchCSS&quot;: true}">
+        {% for product in producten %}
+            <!-- Item -->
+            <div class=" mx-auto col-lg-3 col-xs-10 d-flex flex-column bg-cover"
+                 style="background-image: url({{ product.image }}); margin-top: 4vh; margin-bottom: 4vh">
+                <div class="card bg-dark-5 bg-hover text-white text-center" style="min-height: 470px;">
+                    <div class="card-body mt-auto mb-n11 py-8">
 
-    <div class="container">
+                        <!-- Heading -->
+                        <h1 class="mb-0 font-weight-bolder">
+                            {{ product.naam }}
+                        </h1>
 
-        <!-- Header -->
-        <div class="row align-items-center mb-7">
-            <div class="col-12 col-md">
-
-                <!-- Heading -->
-                <h3 class="mb-1">Pompen</h3>
-
-                <!-- Breadcrumb -->
-                <ol class="breadcrumb mb-md-0 font-size-xs text-gray-400">
-                    <li class="breadcrumb-item">
-                        <a class="text-gray-400" href="index.html">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active">
-                        Pompen
-                    </li>
-                </ol>
-
-            </div>
-            <div class="col-12 col-md-auto">
-
-{#                <!-- Select -->#}
-{#                <select class="custom-select custom-select-xs">#}
-{#                    <option selected="">Most popular</option>#}
-{#                </select>#}
-
-            </div>
-        </div>
-
-        <!-- Products -->
-        <div class="row">
-            <div class="col-6 col-md-4">
-
-                <!-- Card -->
-                <div class="card mb-7">
-
-                    <!-- Badge -->
-                    <div class="badge badge-white card-badge card-badge-left text-uppercase">
-                        New
                     </div>
+                    <div class="card-body mt-auto py-8">
 
-                    <!-- Image -->
-                    <div class="card-img">
-
-                        <!-- Image -->
-                        <a class="card-img-hover" href="#">
-                            <img class="card-img-top card-img-back" src="https://via.placeholder.com/250" alt="...">
-                            <img class="card-img-top card-img-front" src="https://via.placeholder.com/300" alt="...">
+                        <!-- Button -->
+                        <a class="btn btn-white stretched-link" href="#">
+                            dolor sit <i class="fas fa-arrow-right"></i>
                         </a>
 
-                        <!-- Actions -->
-                        <div class="card-actions">
-                      <span class="card-action">
-                        <button class="btn btn-xs btn-circle btn-white-primary" data-toggle="modal"
-                                data-target="#modalProduct">
-                          <i class="fe fe-eye"></i>
-                        </button>
-                      </span>
-                            <span class="card-action">
-                        <button class="btn btn-xs btn-circle btn-white-primary" data-toggle="button">
-                          <i class="fe fe-shopping-cart"></i>
-                        </button>
-                      </span>
-                            <span class="card-action">
-                        <button class="btn btn-xs btn-circle btn-white-primary" data-toggle="button">
-                          <i class="fe fe-heart"></i>
-                        </button>
-                      </span>
-                        </div>
-
                     </div>
-
-                    <!-- Body -->
-                    <div class="card-body px-0">
-
-                        <!-- Category -->
-                        <div class="font-size-xs">
-                            <a class="text-muted" href="shop.html">Shoes</a>
-                        </div>
-
-                        <!-- Title -->
-                        <div class="font-weight-bold">
-                            <a class="text-body" href="product.html">
-                                Leather mid-heel Sandals
-                            </a>
-                        </div>
-
-                        <!-- Price -->
-                        <div class="font-weight-bold text-muted">
-                            $129.00
-                        </div>
-
-                    </div>
-
                 </div>
-
             </div>
-            <div class="col-6 col-md-4">
+        {% endfor %}
 
-                <!-- Card -->
-                <div class="card mb-7">
-
-                    <!-- Badge -->
-                    <div class="badge badge-dark card-badge card-badge-left text-uppercase">
-                        Sale
-                    </div>
-
-                    <!-- Image -->
-                    <a class="card-img-hover" href="#">
-                        <img class="card-img-top card-img-back" src="https://via.placeholder.com/250" alt="...">
-                        <img class="card-img-top card-img-front" src="https://via.placeholder.com/300" alt="...">
-                    </a>
-
-                    <!-- Body -->
-                    <div class="card-body px-0">
-
-                        <!-- Category -->
-                        <div class="font-size-xs">
-                            <a class="text-muted" href="shop.html">Bags</a>
-                        </div>
-
-                        <!-- Title -->
-                        <div class="font-weight-bold">
-                            <a class="text-body" href="product.html">
-                                Suede cross body Bag
-                            </a>
-                        </div>
-
-                        <!-- Price -->
-                        <div class="font-weight-bold">
-                            <span class="font-size-xs text-gray-350 text-decoration-line-through">$79.00</span>
-                            <span class="text-primary">$49.00</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
 
     </div>
 

@@ -40,10 +40,10 @@
                 <!-- Nav -->
                 <ul class="navbar-nav mx-auto">
                     <!-- home -->
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
 
                         <!-- Toggle -->
-                        <a class="nav-link" data-toggle="dropdown" href="{{ path('homepage') }}">Home</a>
+                        <a class="nav-link" href="{{ path('product', {id:'koi karpers'}) }}">Koi Karpers</a>
 
                     </li>
                     <li class="nav-item dropdown position-static">
@@ -174,7 +174,7 @@
                                                         <div class="card">
 
                                                             <!-- Image -->
-                                                            <img class="card-img" src=".{{ asset("img/download.jpg") }}"
+                                                            <img class="card-img" src="{{ asset('img/koi-1.jpeg') }}"
                                                                  alt="...">
 
                                                             <!-- Overlay -->

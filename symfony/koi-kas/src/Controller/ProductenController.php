@@ -26,7 +26,6 @@ class ProductenController extends AbstractController
         $producten = $em->getRepository(Categorie::class)->findBy([
             'naam' => $id
         ]);
-
         $producten = $producten[0];
         $product = $producten->getProducts();
         return $this->render('bezoeker/producten.html.twig', [
