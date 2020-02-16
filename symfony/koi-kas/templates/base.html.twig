@@ -14,18 +14,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
               integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
               crossorigin="anonymous">
-        <script src="{{ asset('js/Oefenen.js') }}"></script>
-        <script src="{{ asset('js/editor.js') }}">
-            import EditorJS from '{{ asset('js/editor.js') }}';
-            import Header from '{{ asset('js/editor.js/header') }}';
-            import List from '{{ asset('js/editor.js/list') }}';
-
-
-            const editor = new EditorJS();
-            const Header = new Header();
-            const List = new List();
-
-        </script>
     {% endblock %}
 </head>
 <body>
@@ -453,6 +441,8 @@
 {% endblock %}
 
 {% block script %}
+    {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_script_tags('editor') }}
     <!-- Map (replace the API key to enable) -->
     <!-- <script src="./Shopper_files/js(1)"></script> -->
 

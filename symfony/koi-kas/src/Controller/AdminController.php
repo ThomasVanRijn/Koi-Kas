@@ -10,6 +10,8 @@ use App\Entity\User;
 use App\Form\Type\ImageType;
 use App\Form\UserType;
 use App\Repository\UserRepository;
+use Psr\Log\LoggerInterface;
+//+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -136,6 +138,28 @@ class AdminController extends AbstractController
 
     public function test() {
         return $this->render('admin/test.html.twig');
+    }
+
+    /**
+     * @Route("/uploadFile", name="uploadFile")
+     */
+
+    public function uploadFile(Request $request, LoggerInterface $logger): Response {
+        $image = $_FILES['image'];
+
+        $target = $this->getParameter('blogImages').'/'.$image['name'];;
+        move_uploaded_file( $image['tmp_name'], $target );
+        $path = '../uploads/blogImages/'.$image['name'];
+        $response = new Response();
+        $json = ['success' => 1, 'file' => ['url' => $path], 'fileName' => $image];
+        $response->setContent(json_encode($json));
+        $response->setStatusCode(Response::HTTP_OK);
+
+// sets a HTTP response header
+        $response->headers->set('Content-Type', 'application/json');
+
+// prints the HTTP headers followed by the content
+        return $response;
     }
 
 }

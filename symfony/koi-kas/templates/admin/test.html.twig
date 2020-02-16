@@ -5,16 +5,8 @@
 
         <button id="save-button">Save</button>
         <pre id="output"></pre>
-
-        <div id="editorjs">
+        <div id="editorjs" style="background-color: cyan">
             <script>
-                const editor = new EditorJS({
-                    autofocus: true,
-                    tools: {
-                        image: Oefenen
-                    }
-                });
-
                 const saveButton = document.getElementById('save-button');
                 const output = document.getElementById('output');
 
@@ -26,5 +18,7 @@
 
             </script>
         </div>
+        <p></p>
     </div>
+
 {% endblock %}
