@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="{{ asset("css/all.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/jquery.fancybox.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/flickity.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/simplebar.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/vs2015.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/flickity-fade.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/feather.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/theme.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/style.css") }}">
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-154926440-1');
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script type="text/javascript" async="" src="./Shopper_files/analytics.js.download"></script> -->
+    <!-- <script async="" src="./Shopper_files/js"></script> -->
+{% endblock %}
+
+{% block main %}
+    {{ form(form) }}
+{% endblock %}

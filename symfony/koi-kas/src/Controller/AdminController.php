@@ -6,16 +6,20 @@ namespace App\Controller;
 
 
 use App\Entity\Image;
+use App\Entity\Product;
 use App\Entity\User;
 use App\Form\Type\ImageType;
+use App\Form\Type\ProductType;
 use App\Form\UserType;
 use App\Repository\UserRepository;
 use Psr\Log\LoggerInterface;
 //+
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 
 /**
@@ -23,9 +27,15 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class AdminController extends AbstractController
 {
+
     /**
-     * @isGranted("ROLE_ADMIN")
+     * @Route("/home", name="admin_home")
+     * @IsGranted("ROLE_ADMIN")
      */
+    public function home() {
+        return $this->render('admin/home.html.twig');
+    }
+
 
     /**
      * @Route("/user/overzicht", name="user_index", methods={"GET"})
@@ -38,24 +48,25 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/user/new", name="user_new", methods={"GET","POST"})
+     * @Route("/user/new")
      */
-    public function new(Request $request): Response
+    public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($user);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('user_index');
+            $em = $this->getDoctrine()->getManager();
+            $password = $passwordEncoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($password);
+            $person = $form->getData();
+            $em->persist($person);
+            $em->flush();
+            return $this->redirectToRoute('homepage');
         }
 
         return $this->render('user/new.html.twig', [
-            'user' => $user,
             'form' => $form->createView(),
         ]);
     }
@@ -137,6 +148,8 @@ class AdminController extends AbstractController
      */
 
     public function test() {
+
+
         return $this->render('admin/test.html.twig');
     }
 
@@ -160,6 +173,43 @@ class AdminController extends AbstractController
 
 // prints the HTTP headers followed by the content
         return $response;
+    }
+
+    /**
+     * @Route("/producten", name="admin_producten")
+     */
+    public function adminProducten() {
+        $em = $this->getDoctrine()->getManager();
+        $producten = $em->getRepository(Product::class)->findAll();
+        return $this->render("admin/producten.html.twig", [
+            'producten' => $producten
+        ]);
+    }
+
+    /**
+     * @Route("/producten/toevoegen", name="product_toevoegen")
+     */
+    public function add_product(Request $request) {
+        $em = $this->getDoctrine()->getManager();
+        $product = new Product();
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()) {
+            $image = $form->get('image')->getData();
+            if($image) {
+                $uri = $product->setUri($image);
+
+                $product->setImage($uri->getUri());
+            }
+            $product = $form->getData();
+            $em->persist($product);
+            $em->flush();
+            return $this->redirectToRoute('admin_producten');
+        }
+
+        return $this->render('admin/producten_toevoegen.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 
 }

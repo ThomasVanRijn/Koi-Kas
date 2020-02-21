@@ -128,29 +128,7 @@ class BezoekerController extends AbstractController
         throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
     }
 
-    /**
-     * @Route("/user/new")
-     */
-    public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder)
-    {
-        $user = new User();
-        $form = $this->createForm(UserType::class, $user);
-        $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $password = $passwordEncoder->encodePassword($user, $user->getPassword());
-            $user->setPassword($password);
-            $person = $form->getData();
-            $em->persist($person);
-            $em->flush();
-            return $this->redirectToRoute('homepage');
-        }
-
-        return $this->render('user/new.html.twig', [
-            'form' => $form->createView(),
-        ]);
-    }
 
 
 

@@ -71,9 +71,9 @@ class Image
         return $this->uri;
     }
 
-    /**
-     * @param string $uri
-     */
+        /**
+         * @param string $uri
+         */
     public function setUri(string $uri): self
     {
         $normalizer = new DataUriNormalizer();

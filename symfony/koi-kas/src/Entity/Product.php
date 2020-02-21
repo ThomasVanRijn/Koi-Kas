@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Normalizer\DataUriNormalizer;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
@@ -106,4 +107,21 @@ class Product
 
         return $this;
     }
+    /**
+     * @param string $uri
+     */
+    public function setUri(string $uri): self
+    {
+        $normalizer = new DataUriNormalizer();
+        $uri = $normalizer->normalize(new \SplFileObject($uri));
+        $this->uri = $uri;
+
+        return $this;
+    }
+
+    public function getUri(): ?string
+    {
+        return $this->uri;
+    }
+
 }

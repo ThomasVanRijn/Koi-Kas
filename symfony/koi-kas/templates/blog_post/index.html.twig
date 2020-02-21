@@ -5,27 +5,31 @@
 {% block main %}
     <h1>BlogPost index</h1>
 
+   <button class="btn btn-primary"> <a style="color:white; text-decoration: none;" href="{{ path('blog_post_new') }}">Nieuwe blog maken</a> </button> <br>
     <table class="table">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Naam</th>
-                <th>Verhaal</th>
-                <th>Images</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <h3>Naam</h3>
+        </tr>
         </thead>
         <tbody>
         {% for blog_post in blog_posts %}
             <tr>
-                <td>{{ blog_post.id }}</td>
                 <td>{{ blog_post.naam }}</td>
-                <td>{{ blog_post.verhaal }}</td>
-                <td>{{ blog_post.images ? blog_post.images|join(', ') : '' }}</td>
+                <td> Upload datum</td>
                 <td>
-                    <a href="{{ path('blog_post_show', {'id': blog_post.id}) }}">show</a>
-                    <a href="{{ path('blog_post_edit', {'id': blog_post.id}) }}">edit</a>
+                    <button class="btn btn-primary">
+                        <a style="color:white; text-decoration: none;" href="{{ path('blog_post_show', {'id': blog_post.id}) }}">bekijken</a>
+                    </button>
+                    <button class="btn btn-primary">
+                        <a style="color:white; text-decoration: none;" href="{{ path('blog_post_edit', {'id': blog_post.id}) }}">bewerken</a>
+                    </button>
+                    <button class="btn btn-primary">
+                        <a style="color:white; text-decoration: none;" href="">Verwijderen</a>
+                    </button>
                 </td>
+
+
             </tr>
         {% else %}
             <tr>
@@ -34,6 +38,4 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('blog_post_new') }}">Create new</a>
 {% endblock %}

@@ -10,15 +10,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 
-/**
- * @Route("/producten")
- */
 
 class ProductenController extends AbstractController
 {
 
     /**
-     * @Route("/{id}", name="product")
+     * @Route("/producten/{id}", name="product")
      */
 
     public function product($id) {
@@ -38,7 +35,11 @@ class ProductenController extends AbstractController
      */
 
     public function producten() {
-        return $this->render("bezoeker/producten.html.twig");
+        $em = $this->getDoctrine()->getManager();
+        $producten = $em->getRepository(Product::class)->findAll();
+        return $this->render("bezoeker/producten.html.twig", [
+            'producten' => $producten
+        ]);
     }
 
 

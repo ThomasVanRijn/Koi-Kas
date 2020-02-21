@@ -3,34 +3,10 @@
 {% block title %}BlogPost{% endblock %}
 
 {% block main %}
-    <h1>BlogPost</h1>
+                <h4>Naam</h4>
+                {{ blog_post.naam }}
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ blog_post.id }}</td>
-            </tr>
-            <tr>
-                <th>Naam</th>
-                <td>{{ blog_post.naam }}</td>
-            </tr>
-            <tr>
-                <th>Verhaal</th>
-                <td>{{ blog_post.verhaal }}</td>
-            </tr>
-            <tr>
-                <th>Images</th>
-                <td>{{ blog_post.images ? blog_post.images|join(', ') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
+                <h4>Verhaal</h4>
+    {{ blog_post.verhaal }}
 
-    <a href="{{ path('blog_post_index') }}">back to list</a>
-
-    <a href="{{ path('blog_post_edit', {'id': blog_post.id}) }}">edit</a>
-
-    {{ include('blog_post/_delete_form.html.twig') }}
-
-    {{ blog_post.verhaal | raw }}
 {% endblock %}
