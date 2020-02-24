@@ -161,6 +161,7 @@
   </component>
   <component name="ProjectId" id="1XeqfWS5RwgWXuSBAfy8k309JsW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -175,6 +176,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PassFD" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -214,7 +216,9 @@
       <workItem from="1582295209952" duration="5716000" />
       <workItem from="1582537580941" duration="7602000" />
       <workItem from="1582561325941" duration="2999000" />
-      <workItem from="1582566266543" duration="270000" />
+      <workItem from="1582566266543" duration="622000" />
+      <workItem from="1582566955711" duration="671000" />
+      <workItem from="1582567692902" duration="234000" />
     </task>
     <servers />
   </component>
@@ -260,9 +264,14 @@
     </state>
     <state x="2310" y="335" key="NewPhpClassDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582298287098" />
     <state x="710" y="335" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581593474374" />
-    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581681185856">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2061" y="163" key="SettingsEditor" timestamp="1582567481280">
+      <screen x="1600" y="0" width="1920" height="1040" />
     </state>
+    <state x="2061" y="163" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582567481280" />
+    <state x="2369" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582566607666">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2369" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582566607666" />
     <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581681185856" />
   </component>
 </project>
