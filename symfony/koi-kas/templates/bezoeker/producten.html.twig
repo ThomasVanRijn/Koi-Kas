@@ -29,36 +29,49 @@
     <!-- <script type="text/javascript" async="" src="./Shopper_files/analytics.js.download"></script> -->
     <!-- <script async="" src="./Shopper_files/js"></script> -->
 {% endblock %}
+
 {% block main %}
-    <div class="container-fluid">
-    <div class="mx-auto row no-gutters d-block d-lg-flex flickity flickity-lg-none"
-         data-flickity="{&quot;watchCSS&quot;: true}">
-        {% for product in producten %}
-            <!-- Item -->
-            <div class=" mx-auto col-lg-3 col-xs-10 d-flex flex-column bg-cover"
-                 style="background-image: url({{ product.image }}); margin-top: 4vh; margin-bottom: 4vh">
-                <div class="card bg-dark-5 bg-hover text-white text-center" style="min-height: 470px;">
-                    <div class="card-body mt-auto mb-n11 py-8">
+    <div class="container">
+        <div class="row">
+            {% for product in producten %}
+                <div class="col-6 col-md-4">
 
-                        <!-- Heading -->
-                        <h1 class="mb-0 font-weight-bolder">
-                            {{ product.naam }}
-                        </h1>
+                    <!-- Cards -->
+                    <div class="card mb-7">
 
-                    </div>
-                    <div class="card-body mt-auto py-8">
+                        <!-- Image -->
+                        <div class="card-img">
 
-                        <!-- Button -->
-                        <a class="btn btn-white stretched-link" href="#">
-                            dolor sit <i class="fas fa-arrow-right"></i>
-                        </a>
+                            <!-- Image -->
+                            <img class="card-img-top card-img-back" src="https://via.placeholder.com/350" alt="...">
+
+                        </div>
+
+                        <!-- Body -->
+                        <div class="card-body px-0">
+
+                            <!-- Category -->
+                            <div class="font-size-xs">
+                                <a class="text-muted" href="shop.html">{{ product.categorie.naam }}</a>
+                            </div>
+
+                            <!-- Title -->
+                            <div class="font-weight-bold">
+                                <a class="text-body" href="product.html">
+                                    {{ product.naam }}
+                                </a>
+                            </div>
+
+                            <!-- Price -->
+                            <div class="font-weight-bold text-muted">
+                                &euro; {{ product.prijs }}
+                            </div>
+
+                        </div>
 
                     </div>
                 </div>
-            </div>
-        {% endfor %}
-
-
+            {% endfor %}
+        </div>
     </div>
-
 {% endblock %}
