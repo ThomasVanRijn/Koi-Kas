@@ -36,7 +36,7 @@
         {% for product in producten %}
             <!-- Item -->
             <div class=" mx-auto col-lg-3 col-xs-10 d-flex flex-column bg-cover"
-                 style="background-image: url({{ product.image }}); margin-top: 4vh; margin-bottom: 4vh">
+                 style=" background-image: url({{ product.image }}); margin-top: 4vh; margin-bottom: 4vh">
                 <div class="card bg-dark-5 bg-hover text-white text-center" style="min-height: 470px;">
                     <div class="card-body mt-auto mb-n11 py-8">
 
@@ -49,19 +49,17 @@
                     <div class="card-body mt-auto py-8">
 
                         <!-- Button -->
-                        <a class="btn btn-white stretched-link" href="#">
+                        <a class="btn btn-white " href="{{ path('admin_product', {id: product.id}) }}">
                             Bekijken <i class="fas fa-arrow-right"></i>
                         </a>
 
-                        <a class="btn btn-white stretched-link" href="#">
+                        <a class="btn btn-white" href="{{ path('product_wijzigen', {id: product.id}) }}">
                             Bewerken <i class="fas fa-arrow-right"></i>
                         </a>
 
-                        <a class="btn btn-white stretched-link" href="#">
+                        <a class="btn btn-white" href="#">
                             Verwijderen <i class="fas fa-arrow-right"></i>
                         </a>
-
-
 
 
                     </div>

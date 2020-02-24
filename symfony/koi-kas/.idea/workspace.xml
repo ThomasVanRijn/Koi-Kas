@@ -177,12 +177,12 @@
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\src\Form\Type" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\public\img" />
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\public\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\src\Form\Type" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -212,7 +212,7 @@
       <workItem from="1581860360338" duration="4245000" />
       <workItem from="1582192520301" duration="849000" />
       <workItem from="1582295209952" duration="5716000" />
-      <workItem from="1582537580941" duration="808000" />
+      <workItem from="1582537580941" duration="7602000" />
     </task>
     <servers />
   </component>
@@ -240,10 +240,10 @@
     </state>
     <state x="2768" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582296834353" />
     <state x="1168" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581417977270" />
-    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582299369227">
+    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582543576540">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582299369227" />
+    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582543576540" />
     <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581670534347" />
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1581669670409">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 
+use App\Entity\Categorie;
 use App\Entity\Image;
 use App\Entity\Product;
 use App\Entity\User;
@@ -209,6 +210,51 @@ class AdminController extends AbstractController
 
         return $this->render('admin/producten_toevoegen.html.twig', [
             'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/producten/wijzigen/{id}", name="product_wijzigen")
+     */
+
+    public function product_wijzigen(Request $request, $id) {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $product = $em->getRepository(Product::class)->find($id);
+
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $product=$form->getData();
+
+            $entityManager=$this->getDoctrine()->getManager();
+            $entityManager->persist($product);
+            $entityManager->flush();
+            return $this->redirectToRoute('admin_producten');
+        }
+
+        return $this->render('admin/product_wijzigen.html.twig', [
+            'form' => $form->createView(),
+            'product' => $product
+        ]);
+
+    }
+
+    /**
+     * @Route("/producten/{id}", name="admin_product")
+     */
+
+    public function product($id) {
+        $em = $this->getDoctrine()->getManager();
+        $producten = $em->getRepository(Product::class)->findBy([
+            'id' => $id
+        ]);
+
+        $producten = $producten[0];
+        return $this->render('admin/product.html.twig', [
+            'product' => $producten
         ]);
     }
 

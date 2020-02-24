@@ -19,6 +19,13 @@
     {% endblock %}
 </head>
 <body>
+{% block header %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12"><img style="width:100%; height: 15vh;" src="{{ asset('img/koi-kas_02.jpg') }}"></div>
+        </div>
+    </div>
+{% endblock %}
 {% block nav %}
 
     <!-- NAVBAR -->
@@ -26,9 +33,7 @@
         <div class="container">
 
             <!-- Brand -->
-            <a class="navbar-brand" href="/">
-                Koi Kas
-            </a>
+
 
             <!-- Toggler -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -41,6 +46,11 @@
 
                 <!-- Nav -->
                 <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            Home
+                        </a>
+                    </li>
                     <!-- home -->
                     <li class="nav-item">
 
