@@ -61,14 +61,6 @@ class BezoekerController extends AbstractController
     }
 
     /**
-     * @Route("/koi-te-koop", name="koi-te-koop")
-     */
-
-    public function koiTeKoop() {
-        return $this->render("bezoeker/koi-te-koop.html.twig");
-    }
-
-    /**
      * @Route("/japan-reizen", name="japan-reizen")
      */
 
@@ -133,6 +125,15 @@ class BezoekerController extends AbstractController
     public function logout()
     {
         throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
+    }
+
+    /**
+     * @Route("/Koi-Karpers", name="koikarpers")
+     */
+    public function koiKarpers() {
+
+        return $this->render('bezoekers/koi-karper.html.twig');
+
     }
 
 
