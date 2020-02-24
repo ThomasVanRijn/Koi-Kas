@@ -39,7 +39,7 @@ class Product
     private $categorie;
 
     /**
-     * @ORM\Column(type="string", length=100000000)
+     * @ORM\Column(type="string", length=100000000000)
      */
     private $image;
 
