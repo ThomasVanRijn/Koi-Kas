@@ -23,6 +23,13 @@ class BezoekerController extends AbstractController
     }
 
     /**
+     * @Route("/producten", name="producten")
+     */
+    public function producten() {
+        return $this->render("bezoeker/producten.html.twig");
+    }
+
+    /**
      * @Route("/koi-dokter", name="koi-dokter")
      */
     public function koiDokter() {
