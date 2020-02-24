@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use App\Entity\Categorie;
+use App\Entity\Karper;
 use App\Entity\Product;
 use App\Entity\User;
 use App\Form\UserType;
@@ -108,14 +109,6 @@ class BezoekerController extends AbstractController
     }
 
     /**
-     * @Route("/koi-te-koop", name="koi-te-koop")
-     */
-    public function koiTeKoop()
-    {
-        return $this->render("bezoeker/koi-te-koop.html.twig");
-    }
-
-    /**
      * @Route("/japan-reizen", name="japan-reizen")
      */
     public function japanReizen()
@@ -179,6 +172,19 @@ class BezoekerController extends AbstractController
     public function logout()
     {
         throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
+    }
+
+    /**
+     * @Route("/Koi-Karper", name="koiKarper")
+     */
+    public function KoiKarper() {
+        $em = $this->getDoctrine()->getManager();
+
+        $producten = $em->getRepository(Karper::class)->findAll();
+
+        return $this->render('bezoeker/koi-karper.html.twig', [
+            'producten' => $producten
+        ]);
     }
 
 

@@ -46,6 +46,11 @@ class Karper
      */
     private $prijs;
 
+    /**
+     * @ORM\Column(type="string", length=100000000000)
+     */
+    private $image;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +124,18 @@ class Karper
     public function setPrijs(string $prijs): self
     {
         $this->prijs = $prijs;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
