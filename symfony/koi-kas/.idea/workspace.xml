@@ -2,29 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1186cccd-033d-4a32-b0aa-b0a8f48b6b20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/Oefenen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/editor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ImageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200214084310.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200214092321.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ImageRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/foto.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/test.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/image/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/image/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/image/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/image/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/image/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/image/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200224171705.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/koi-kas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/koi-kas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductenController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Type/BlogPost1Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Type/BlogPost1Type.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Type/ImageType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Type/ImageType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BezoekerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BezoekerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/test.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog_post/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog_post/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog_post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog_post/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/contact.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/producten.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/producten.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,28 +171,28 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PassFD" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\src\Form\Type" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\public\img" />
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\public\css" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\src\Form\Type" />
-    </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -228,6 +225,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Contact pagina gemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Contact pagina gemaakt" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="183" key="#Inspections" timestamp="1581669890420">
