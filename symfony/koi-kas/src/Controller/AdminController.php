@@ -7,7 +7,12 @@ namespace App\Controller;
 
 use App\Entity\Categorie;
 use App\Entity\Image;
+use App\Entity\Karper;
+use App\Entity\Kweker;
+use App\Entity\Leeftijd;
+use App\Entity\Maat;
 use App\Entity\Product;
+use App\Entity\Soort;
 use App\Entity\User;
 use App\Form\Type\ImageType;
 use App\Form\Type\ProductType;
@@ -255,6 +260,60 @@ class AdminController extends AbstractController
         $producten = $producten[0];
         return $this->render('admin/product.html.twig', [
             'product' => $producten
+        ]);
+    }
+
+    /**
+     * @Route("/filter", name="filterTest")
+     */
+    public function filterTest(Request $request) {
+        $em = $this->getDoctrine()->getManager();
+        $kwekers = $em->getRepository(Kweker::class)->findAll();
+        $soorten = $em->getRepository(Soort::class)->findAll();
+        $leeftijden = $em->getRepository(Leeftijd::class)->findAll();
+        $maten = $em->getRepository(Maat::class)->findAll();
+        $t = $em->getRepository(Karper::class)->findBy([
+            'soort' => 1
+        ]);
+        $qb = $em->getRepository(Karper::class)->createQueryBuilder('kp');
+        if($request->query->getAlnum('soort')) {
+            $qb->join('kp.soort', 'soort')
+                ->where('soort.zoekNaam LIKE :soort')->setParameter(':soort', $request->query->getAlnum('soort'));
+        }
+        if($request->query->getAlnum('kweker')) {
+            $qb->join('kp.kweker', 'k')
+                ->andWhere('k.zoekNaam LIKE :kweker')->setParameter(':kweker', $request->query->getAlnum('kweker'));
+        }
+
+        if($request->query->getAlnum('maat')) {
+            $qb->join('kp.maat', 'm')
+                ->andWhere('m.zoekNaam LIKE :maat')->setParameter(':maat', $request->query->getAlnum('maat'));
+        }
+        if($request->query->getAlnum('leeftijd')) {
+            $qb->join('kp.leeftijd', 'l')
+                ->andWhere('l.zoekNaam LIKE :leeftijd')->setParameter(':leeftijd', $request->query->getAlnum('leeftijd'));
+        }
+
+        $p = $em->getRepository(Karper::class)->findBy([
+            'soort' => 1
+        ]);
+        //dd($p);
+        $query = $qb->getQuery();
+        //dd($qb);
+        $producten = $query->getArrayResult();
+        //dd($producten);
+        //dd($query);
+        //dd($test);
+
+       // $producten = $em->getRepository(Karper::class)->findAll();
+        //dd($producten);
+        return $this->render('admin/filter_test.html.twig', [
+            'producten' => $producten,
+            'kwekers' => $kwekers,
+            'soorten' => $soorten,
+            'leeftijden' => $leeftijden,
+            'maten' => $maten,
+            't' => $t
         ]);
     }
 

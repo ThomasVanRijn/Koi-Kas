@@ -218,7 +218,8 @@
       <workItem from="1582561325941" duration="2999000" />
       <workItem from="1582566266543" duration="622000" />
       <workItem from="1582566955711" duration="671000" />
-      <workItem from="1582567692902" duration="2006000" />
+      <workItem from="1582567692902" duration="2234000" />
+      <workItem from="1582618973888" duration="13626000" />
     </task>
     <servers />
   </component>
@@ -246,10 +247,14 @@
     </state>
     <state x="2768" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582296834353" />
     <state x="1168" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581417977270" />
-    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582543576540">
+    <state x="2353" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1582634414865">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582543576540" />
+    <state x="2353" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582634414865" />
+    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582621532822">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582621532821" />
     <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581670534347" />
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1581669670409">
       <screen x="0" y="0" width="1920" height="1040" />

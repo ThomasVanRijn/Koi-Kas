@@ -22,34 +22,38 @@ class Karper
     private $naam;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Soort", inversedBy="karpers")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $soort;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Kweker", inversedBy="karpers")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $kweker;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Leeftijd", inversedBy="karpers")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $leeftijd;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Maat", inversedBy="karpers")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $maat;
+
+    /**
+     * @ORM\Column(type="string", length=100000000000000)
+     */
+    private $image;
 
     /**
      * @ORM\Column(type="decimal", precision=10, scale=2)
      */
     private $prijs;
-
-    /**
-     * @ORM\Column(type="string", length=100000000000)
-     */
-    private $image;
 
     public function getId(): ?int
     {
@@ -68,62 +72,50 @@ class Karper
         return $this;
     }
 
-    public function getSoort(): ?string
+    public function getSoort(): ?Soort
     {
         return $this->soort;
     }
 
-    public function setSoort(string $soort): self
+    public function setSoort(?Soort $soort): self
     {
         $this->soort = $soort;
 
         return $this;
     }
 
-    public function getKweker(): ?string
+    public function getKweker(): ?kweker
     {
         return $this->kweker;
     }
 
-    public function setKweker(string $kweker): self
+    public function setKweker(?kweker $kweker): self
     {
         $this->kweker = $kweker;
 
         return $this;
     }
 
-    public function getLeeftijd(): ?int
+    public function getLeeftijd(): ?leeftijd
     {
         return $this->leeftijd;
     }
 
-    public function setLeeftijd(int $leeftijd): self
+    public function setLeeftijd(?leeftijd $leeftijd): self
     {
         $this->leeftijd = $leeftijd;
 
         return $this;
     }
 
-    public function getMaat(): ?int
+    public function getMaat(): ?maat
     {
         return $this->maat;
     }
 
-    public function setMaat(int $maat): self
+    public function setMaat(?maat $maat): self
     {
         $this->maat = $maat;
-
-        return $this;
-    }
-
-    public function getPrijs(): ?string
-    {
-        return $this->prijs;
-    }
-
-    public function setPrijs(string $prijs): self
-    {
-        $this->prijs = $prijs;
 
         return $this;
     }
@@ -136,6 +128,18 @@ class Karper
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getPrijs(): ?string
+    {
+        return $this->prijs;
+    }
+
+    public function setPrijs(string $prijs): self
+    {
+        $this->prijs = $prijs;
 
         return $this;
     }
