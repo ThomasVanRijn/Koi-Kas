@@ -152,7 +152,6 @@ class AdminController extends AbstractController
     /**
      * @Route("/test", name="test")
      */
-
     public function test() {
 
 

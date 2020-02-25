@@ -127,8 +127,9 @@ class BezoekerController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function contact()
+    public function contact(Request $request, \Swift_Mailer $mailer)
     {
+
         return $this->render("bezoeker/contact.html.twig");
     }
 
