@@ -1,0 +1,199 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="{{ asset("css/all.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/jquery.fancybox.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/flickity.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/simplebar.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/vs2015.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/flickity-fade.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/feather.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/theme.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/style.css") }}">
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-154926440-1');
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script type="text/javascript" async="" src="./Shopper_files/analytics.js.download"></script> -->
+    <!-- <script async="" src="./Shopper_files/js"></script> -->
+{% endblock %}
+
+{% block main %}
+    <section>
+        <!-- product -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+
+                            <!-- Images -->
+                            <div class="form-row mb-10 mb-md-0">
+                                <div class="col-12">
+
+                                    <!-- Card -->
+                                    <div class="card">
+                                        <img src="{{ karper.image }}" alt="..."
+                                             class="card-img-top">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-md-6 pl-lg-10">
+
+                            <!-- Header -->
+                            <div class="row mb-1">
+                                <div class="col">
+
+                                    <!-- Preheading -->
+{#                                    <a class="text-muted list-styled-link"#}
+{#                                       href="{{ path('product_categorie', {naam:'pompen'}) }}">#}
+{#                                        {{ karper.soort.naam }}#}
+{#                                    </a>#}
+                                    <p class="text-muted list-styled-link m-0">{{ karper.soort.naam }}</p>
+
+                                </div>
+                            </div>
+
+                            <!-- Heading -->
+                            <h3 class="mb-2">{{ karper.naam }}</h3>
+
+                            <!-- Price -->
+                            <div class="mb-7 text-gray-400">
+                                <span class="ml-1 font-size-h5 font-weight-bold">&euro; {{ karper.prijs }}</span>
+                            </div>
+
+                            <!-- Form -->
+                            <form>
+                                <div class="form-group">
+
+                                    <div class="form-row mb-7">
+                                        <div class="col-12 col-lg-auto">
+
+                                            <!-- Submit -->
+                                            <button class="btn btn-block btn-dark mb-2" data-toggle="button">
+                                                <i class="fe fe-mail mr-2"></i> Bestellen
+                                            </button>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- beschijving -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- Nav -->
+                    <div class="nav nav-tabs nav-overflow justify-content-start justify-content-md-center border-bottom">
+                        <p class="nav-link m-0">
+                            Beschijving
+                        </p>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="descriptionTab">
+                            <div class="row justify-content-center py-9">
+                                <div class="col-12 col-lg-10 col-xl-8">
+                                    <div class="row">
+                                        <div class="col-12">
+
+                                            <!-- Text -->
+                                            <p class="text-gray-500">
+                                                Kweker: {{ karper.kweker.naam }} <br>
+                                                Leeftijd: {{ karper.leeftijd.naam }} <br>
+                                                Maat: {{ karper.maat.naam }}
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+{#        <!-- Andere producten -->#}
+{#        <div class="container">#}
+{#            <h4 class="mb-10 text-center">Andere </h4>#}
+{#            <div class="row">#}
+{#                {% for overigProduct in overigeProducten %}#}
+{#                    <a href="{{ path('product_detail', {'naam': overigProduct.categorie.naam , 'id': overigProduct.id }) }}">#}
+
+{#                        <div class="col-6 col-md-3">#}
+
+{#                            <!-- Cards -->#}
+{#                            <div class="card mb-7">#}
+
+{#                                <!-- Image -->#}
+{#                                <div class="card-img">#}
+
+{#                                    <!-- Image -->#}
+{#                                    <img class="card-img-top card-img-back" src="{{ overigProduct.image }}"#}
+{#                                         alt="...">#}
+
+{#                                </div>#}
+
+{#                                <!-- Body -->#}
+{#                                <div class="card-body px-0">#}
+
+{#                                    <!-- Category -->#}
+{#                                    <div class="font-size-xs">#}
+{#                                        <a class="text-muted"#}
+{#                                           href="shop.html">{{ overigProduct.categorie.naam }}</a>#}
+{#                                    </div>#}
+
+{#                                    <!-- Title -->#}
+{#                                    <div class="font-weight-bold">#}
+{#                                        <a class="text-body" href="product.html">#}
+{#                                            {{ overigProduct.naam }}#}
+{#                                        </a>#}
+{#                                    </div>#}
+
+{#                                    <!-- Price -->#}
+{#                                    <div class="font-weight-bold text-muted">#}
+{#                                        &euro; {{ overigProduct.prijs }}#}
+{#                                    </div>#}
+
+{#                                </div>#}
+
+{#                            </div>#}
+{#                        </div>#}
+{#                    </a>#}
+{#                {% else %}#}
+{#                    <p>Er zijn helaas geen andere {{ karper.categorie }}</p>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        </div>#}
+    </section>
+{% endblock %}

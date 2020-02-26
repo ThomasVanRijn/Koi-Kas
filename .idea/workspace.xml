@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bf43fbf-b8ca-488a-91ef-74bae1c414d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200226180729.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/karper-detail.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/BezoekerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/BezoekerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200224171705.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225101727.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225102109.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225102729.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225103146.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225122441.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225122901.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225123600.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225124053.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225124921.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/filter_test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/filter_test.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/koi-karper.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/koi-karper.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,20 +53,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1X7eS0sS4kKEPWxqs4OB5jlC3YM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/symfony/koi-kas/templates/admin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\templates\admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Github\Koi-Kas\symfony\koi-kas\public\js\editor" />
     </key>
@@ -88,6 +112,8 @@
       <workItem from="1581802248532" duration="12340000" />
       <workItem from="1582542137077" duration="2173000" />
       <workItem from="1582548246970" duration="10935000" />
+      <workItem from="1582637717261" duration="261000" />
+      <workItem from="1582740258629" duration="3017000" />
     </task>
     <task id="LOCAL-00001" summary="responsive">
       <created>1581508583572</created>
@@ -110,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582565251597</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Producten Detail pagina gemaakt">
+      <created>1582637765416</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582637765416</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +163,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="responsive" />
     <MESSAGE value="producten op categorie pagina gemaakt" />
     <MESSAGE value="Producten Detail pagina gemaakt" />

@@ -42,7 +42,6 @@ class AdminController extends AbstractController
         return $this->render('admin/home.html.twig');
     }
 
-
     /**
      * @Route("/user/overzicht", name="user_index", methods={"GET"})
      */
@@ -313,6 +312,18 @@ class AdminController extends AbstractController
             'leeftijden' => $leeftijden,
             'maten' => $maten,
             't' => $t
+        ]);
+    }
+
+    /**
+     * @Route("/koi-karper/{id}", name="karper_detail", methods={"GET","POST"})
+     */
+    public function karperDetail(Karper $Karper): Response
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        return $this->render('admin/karper-detail.html.twig', [
+            'karper' => $Karper,
         ]);
     }
 
