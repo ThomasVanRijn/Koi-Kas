@@ -28,14 +28,7 @@
                             <!-- Header -->
                             <div class="row mb-1">
                                 <div class="col">
-
-                                    <!-- Preheading -->
-{#                                    <a class="text-muted list-styled-link"#}
-{#                                       href="{{ path('product_categorie', {naam:'pompen'}) }}">#}
-{#                                        {{ karper.soort.naam }}#}
-{#                                    </a>#}
                                     <p class="text-muted list-styled-link m-0">{{ karper.soort.naam }}</p>
-
                                 </div>
                             </div>
 
@@ -55,9 +48,9 @@
                                         <div class="col-12 col-lg-auto">
 
                                             <!-- Submit -->
-                                            <button class="btn btn-block btn-dark mb-2" data-toggle="button">
+                                            <a href="mailto:info@koi-kas.nl" class="btn btn-block btn-dark mb-2">
                                                 <i class="fe fe-mail mr-2"></i> Bestellen
-                                            </button>
+                                            </a>
 
                                         </div>
                                     </div>
@@ -113,57 +106,57 @@
 
         <br><br>
 
-{#        <!-- Andere producten -->#}
-{#        <div class="container">#}
-{#            <h4 class="mb-10 text-center">Andere </h4>#}
-{#            <div class="row">#}
-{#                {% for overigProduct in overigeProducten %}#}
-{#                    <a href="{{ path('product_detail', {'naam': overigProduct.categorie.naam , 'id': overigProduct.id }) }}">#}
+        {#        <!-- Andere producten -->#}
+        {#        <div class="container">#}
+        {#            <h4 class="mb-10 text-center">Andere </h4>#}
+        {#            <div class="row">#}
+        {#                {% for overigProduct in overigeProducten %}#}
+        {#                    <a href="{{ path('product_detail', {'naam': overigProduct.categorie.naam , 'id': overigProduct.id }) }}">#}
 
-{#                        <div class="col-6 col-md-3">#}
+        {#                        <div class="col-6 col-md-3">#}
 
-{#                            <!-- Cards -->#}
-{#                            <div class="card mb-7">#}
+        {#                            <!-- Cards -->#}
+        {#                            <div class="card mb-7">#}
 
-{#                                <!-- Image -->#}
-{#                                <div class="card-img">#}
+        {#                                <!-- Image -->#}
+        {#                                <div class="card-img">#}
 
-{#                                    <!-- Image -->#}
-{#                                    <img class="card-img-top card-img-back" src="{{ overigProduct.image }}"#}
-{#                                         alt="...">#}
+        {#                                    <!-- Image -->#}
+        {#                                    <img class="card-img-top card-img-back" src="{{ overigProduct.image }}"#}
+        {#                                         alt="...">#}
 
-{#                                </div>#}
+        {#                                </div>#}
 
-{#                                <!-- Body -->#}
-{#                                <div class="card-body px-0">#}
+        {#                                <!-- Body -->#}
+        {#                                <div class="card-body px-0">#}
 
-{#                                    <!-- Category -->#}
-{#                                    <div class="font-size-xs">#}
-{#                                        <a class="text-muted"#}
-{#                                           href="shop.html">{{ overigProduct.categorie.naam }}</a>#}
-{#                                    </div>#}
+        {#                                    <!-- Category -->#}
+        {#                                    <div class="font-size-xs">#}
+        {#                                        <a class="text-muted"#}
+        {#                                           href="shop.html">{{ overigProduct.categorie.naam }}</a>#}
+        {#                                    </div>#}
 
-{#                                    <!-- Title -->#}
-{#                                    <div class="font-weight-bold">#}
-{#                                        <a class="text-body" href="product.html">#}
-{#                                            {{ overigProduct.naam }}#}
-{#                                        </a>#}
-{#                                    </div>#}
+        {#                                    <!-- Title -->#}
+        {#                                    <div class="font-weight-bold">#}
+        {#                                        <a class="text-body" href="product.html">#}
+        {#                                            {{ overigProduct.naam }}#}
+        {#                                        </a>#}
+        {#                                    </div>#}
 
-{#                                    <!-- Price -->#}
-{#                                    <div class="font-weight-bold text-muted">#}
-{#                                        &euro; {{ overigProduct.prijs }}#}
-{#                                    </div>#}
+        {#                                    <!-- Price -->#}
+        {#                                    <div class="font-weight-bold text-muted">#}
+        {#                                        &euro; {{ overigProduct.prijs }}#}
+        {#                                    </div>#}
 
-{#                                </div>#}
+        {#                                </div>#}
 
-{#                            </div>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                {% else %}#}
-{#                    <p>Er zijn helaas geen andere {{ karper.categorie }}</p>#}
-{#                {% endfor %}#}
-{#            </div>#}
-{#        </div>#}
+        {#                            </div>#}
+        {#                        </div>#}
+        {#                    </a>#}
+        {#                {% else %}#}
+        {#                    <p>Er zijn helaas geen andere {{ karper.categorie }}</p>#}
+        {#                {% endfor %}#}
+        {#            </div>#}
+        {#        </div>#}
     </section>
 {% endblock %}

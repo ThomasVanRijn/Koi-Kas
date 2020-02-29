@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bf43fbf-b8ca-488a-91ef-74bae1c414d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200226180729.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/karper-detail.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/karper-detail.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/BezoekerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/BezoekerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200224171705.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225101727.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225102109.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225102729.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225103146.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225122441.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225122901.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225123600.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225124053.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Migrations/Version20200225124921.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/filter_test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/filter_test.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/karper-detail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/karper-detail.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/koi-karper.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/koi-karper.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/producten.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/producten.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,14 +30,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>image</find>
-      <find>Header</find>
-      <find>enablesin</find>
-      <find>uploader</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,16 +48,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/symfony/koi-kas/templates/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\templates\admin" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Github\Koi-Kas\symfony\koi-kas\public\js\editor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\templates\bezoeker" />
+      <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\templates\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -113,7 +96,8 @@
       <workItem from="1582542137077" duration="2173000" />
       <workItem from="1582548246970" duration="10935000" />
       <workItem from="1582637717261" duration="261000" />
-      <workItem from="1582740258629" duration="3017000" />
+      <workItem from="1582740258629" duration="3250000" />
+      <workItem from="1582989110906" duration="1691000" />
     </task>
     <task id="LOCAL-00001" summary="responsive">
       <created>1581508583572</created>
@@ -143,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582637765416</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Filter pagina mooi gemaakt, karper Detail pagina gemaakt">
+      <created>1582743324059</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582743324060</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +158,8 @@
     <MESSAGE value="responsive" />
     <MESSAGE value="producten op categorie pagina gemaakt" />
     <MESSAGE value="Producten Detail pagina gemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Producten Detail pagina gemaakt" />
+    <MESSAGE value="Filter pagina mooi gemaakt, karper Detail pagina gemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filter pagina mooi gemaakt, karper Detail pagina gemaakt" />
   </component>
   <component name="WindowStateProjectService">
     <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581508582540">
