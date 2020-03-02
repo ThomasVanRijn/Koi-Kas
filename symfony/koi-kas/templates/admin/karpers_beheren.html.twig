@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h3>Karpers</h3>
+                <button class="btn btn-primary">Karper toevoegen</button>
+                <table class="table">
+                    <thead>
+                    <th>Naam</th>
+                    <th>Soort</th>
+                    <th>Kweker</th>
+                    <th>Maat</th>
+                    <th>Leeftijd</th>
+                    <th>Prijs</th>
+                    </thead>
+                    <tbody>
+                    {% for karper in karpers %}
+                    <tr>
+                        <td>{{ karper.naam }}</td>
+                        <td>{{ karper.soort.naam }}</td>
+                        <td>{{ karper.kweker.naam }}</td>
+                        <td>{{ karper.maat.naam }}</td>
+                        <td>{{ karper.leeftijd.naam }}</td>
+                        <td>{{ karper.prijs }}</td>
+                        <td><button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken</button>
+                            <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">Verwijderen</button></td>
+                    </tr>
+                    {% endfor%}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-12">
+                <h3>Soorten</h3>
+                <button class="btn btn-primary">Soort toevoegen</button>
+                <table class="table">
+                    <thead>
+                    <th>Id</th>
+                    <th>Naam</th>
+                    </thead>
+                    <tbody>
+                    {% for soort in soorten %}
+                    <tr>
+                        <td>{{ soort.id }}</td>
+                        <td>{{ soort.naam }}</td>
+                        <td><button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken</button>
+                            <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">Verwijderen</button></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="col-12">
+                <h3>Maten</h3>
+                <button class="btn btn-primary">Maat toevoegen</button>
+                <table class="table">
+                    <thead>
+                    <th>Id</th>
+                    <th>Lengte</th>
+                    </thead>
+                    <tbody>
+                    {% for maat in maten %}
+                    <tr>
+                        <td>{{ maat.id }}</td>
+                        <td>{{ maat.naam }}</td>
+                        <td><button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken</button>
+                            <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">Verwijderen</button></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12">
+                <h3>Kwekers</h3>
+                <button class="btn btn-primary">Kweker toevoegen</button>
+                <table class="table">
+                    <thead>
+                    <th>Id</th>
+                    <th>Naam</th>
+                    </thead>
+                    <tbody>
+                    {% for kweker in kwekers %}
+                    <tr>
+                        <td>{{ kweker.id }}</td>
+                        <td>{{ kweker.naam }}</td>
+                        <td><button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken</button>
+                            <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">Verwijderen</button></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12">
+                <h3>Leeftijden</h3>
+                <button class="btn btn-primary">Leeftijd toevoegen</button>
+                <table class="table">
+                    <thead>
+                    <th>Id</th>
+                    <th>Leeftijd</th>
+                    </thead>
+                    <tbody>
+                    {% for leeftijd in leeftijden %}
+                    <tr>
+                        <td>{{ leeftijd.id }}</td>
+                        <td>{{ leeftijd.naam }}</td>
+                        <td><button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken</button>
+                        <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">Verwijderen</button></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

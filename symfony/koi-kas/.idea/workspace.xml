@@ -154,6 +154,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
       <path value="$PROJECT_DIR$/vendor/hshn/base64-encoded-file" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XeqfWS5RwgWXuSBAfy8k309JsW" />
@@ -176,23 +178,23 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\src\Form\Type" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\public\img" />
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\public\css" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\src\Form\Type" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -217,6 +219,8 @@
       <workItem from="1582566955711" duration="671000" />
       <workItem from="1582567692902" duration="2234000" />
       <workItem from="1582618973888" duration="13853000" />
+      <workItem from="1582651286079" duration="2968000" />
+      <workItem from="1582713944910" duration="5236000" />
     </task>
     <servers />
   </component>
@@ -250,10 +254,10 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2353" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582634414865" />
-    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582621532822">
+    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582714264101">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582621532821" />
+    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582714264101" />
     <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581670534347" />
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1581669670409">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -263,10 +267,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="237" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581582583576" />
-    <state x="2310" y="335" key="NewPhpClassDialog" timestamp="1582298287098">
+    <state x="2310" y="335" key="NewPhpClassDialog" timestamp="1582715816919">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2310" y="335" key="NewPhpClassDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582298287098" />
+    <state x="2310" y="335" key="NewPhpClassDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582715816919" />
     <state x="710" y="335" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581593474374" />
     <state x="2061" y="163" key="SettingsEditor" timestamp="1582567481280">
       <screen x="1600" y="0" width="1920" height="1040" />
@@ -277,5 +281,9 @@
     </state>
     <state x="2369" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582566607666" />
     <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581681185856" />
+    <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582654105046">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582654105046" />
   </component>
 </project>

@@ -15,7 +15,9 @@ use App\Entity\Product;
 use App\Entity\Soort;
 use App\Entity\User;
 use App\Form\Type\ImageType;
+use App\Form\Type\KarperType;
 use App\Form\Type\ProductType;
+use App\Form\Type\SoortType;
 use App\Form\UserType;
 use App\Repository\UserRepository;
 use Psr\Log\LoggerInterface;
@@ -36,7 +38,6 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/home", name="admin_home")
-     * @IsGranted("ROLE_ADMIN")
      */
     public function home() {
         return $this->render('admin/home.html.twig');
@@ -293,27 +294,83 @@ class AdminController extends AbstractController
                 ->andWhere('l.zoekNaam LIKE :leeftijd')->setParameter(':leeftijd', $request->query->getAlnum('leeftijd'));
         }
 
-        $p = $em->getRepository(Karper::class)->findBy([
-            'soort' => 1
-        ]);
-        //dd($p);
         $query = $qb->getQuery();
-        //dd($qb);
-        $producten = $query->getArrayResult();
-        //dd($producten);
-        //dd($query);
-        //dd($test);
 
-       // $producten = $em->getRepository(Karper::class)->findAll();
-        //dd($producten);
+        $producten = $query->getArrayResult();
+
         return $this->render('admin/filter_test.html.twig', [
             'producten' => $producten,
             'kwekers' => $kwekers,
             'soorten' => $soorten,
             'leeftijden' => $leeftijden,
-            'maten' => $maten,
-            't' => $t
+            'maten' => $maten
         ]);
+    }
+
+    /**
+     * @Route("/karpers/beheren", name="karpersBeheren")
+     */
+    public function karpersBeheren() {
+        $em = $this->getDoctrine()->getManager();
+
+        $karpers = $em->getRepository(Karper::class)->findAll();
+        $soorten = $em->getRepository(Soort::class)->findAll();
+        $maten = $em->getRepository(Maat::class)->findAll();
+        $kwekers = $em->getRepository(Kweker::class)->findAll();
+        $leeftijden = $em->getRepository(Leeftijd::class)->findAll();
+
+        return $this->render('admin/karpers_beheren.html.twig' , [
+            'karpers' => $karpers,
+            'soorten' => $soorten,
+            'maten' => $maten,
+            'kwekers' => $kwekers,
+            'leeftijden' => $leeftijden
+        ]);
+    }
+
+    /**
+     * @Route("/soort/toevoegen", name="soortToevoegen")
+     */
+    public function soortToevoegen(Request $request) {
+        $soort = new Soort();
+
+        $em = $this->getDoctrine()->getManager();
+
+        $form = $this->createForm(SoortType::class, $soort);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()) {
+            $soort = $form->getData();
+
+            $em->persist($soort);
+            $em->flush();
+            return $this->redirectToRoute('karpersBeheren');
+        }
+        return $this->render('admin/soort_toevoegen.html.twig', [
+            'form' => $form->createView()
+        ]);
+
+    }
+
+    /**
+     * @Route("/karper/toevoegen", name="karperToevoegen")
+     */
+    public function karperToevoegen(Request $request) {
+        $karper = new Karper();
+
+        $em = $this->getDoctrine()->getManager();
+        $form = $this->createForm(KarperType::class, $karper);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()) {
+            $karper = $form->getData();
+            $em->persist($karper);
+            $em->flush();
+            return $this->redirectToRoute('karpersBeheren');
+        }
+
+        return $this->render('admin/karper_toevoegen.html.twig', [
+            'form' => $form->createView()
+        ]);
+
     }
 
 }

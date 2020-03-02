@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\DocBlock\Serializer;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\KarperRepository")
@@ -46,7 +48,7 @@ class Karper
     private $maat;
 
     /**
-     * @ORM\Column(type="string", length=100000000000000)
+     * @ORM\Column(type="string", length=100000000000000, nullable=true)
      */
     private $image;
 
@@ -143,4 +145,5 @@ class Karper
 
         return $this;
     }
+
 }
