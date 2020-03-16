@@ -29,7 +29,8 @@
         "symfony/web-link": "4.4.*",
         "symfony/web-server-bundle": "4.4.*",
         "symfony/webpack-encore-bundle": "^1.7",
-        "symfony/yaml": "4.4.*"
+        "symfony/yaml": "4.4.*",
+        "stfalcon/tinymce-bundle": "*"
     },
     "require-dev": {
         "symfony/debug-pack": "*",

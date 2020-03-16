@@ -198,6 +198,13 @@ class BezoekerController extends AbstractController
         throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
     }
 
+    /**
+     * @Route("/testBlog", name="testBlog")
+     */
+    public function testBlog() {
+        return $this->render("blog_post/test.html.twig");
+    }
+
 
 
 

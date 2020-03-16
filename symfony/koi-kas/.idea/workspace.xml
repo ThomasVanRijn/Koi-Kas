@@ -2,26 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1186cccd-033d-4a32-b0aa-b0a8f48b6b20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200224171705.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog_post/test.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/koi-kas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/koi-kas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BezoekerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BezoekerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Type/BlogPost1Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Type/BlogPost1Type.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/test.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/test.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bezoeker/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/contact.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/koi-karper.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/koi-karper.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/product-detail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/product-detail.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/bezoeker/producten.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/producten.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog_post/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog_post/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog_post/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog_post/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog_post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog_post/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +158,7 @@
       <path value="$PROJECT_DIR$/vendor/hshn/base64-encoded-file" />
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/stfalcon/tinymce-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XeqfWS5RwgWXuSBAfy8k309JsW" />
@@ -173,9 +176,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Yii/yii2-blog-applicatie/BlogApplicatie" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -221,6 +224,10 @@
       <workItem from="1582618973888" duration="13853000" />
       <workItem from="1582651286079" duration="2968000" />
       <workItem from="1582713944910" duration="5236000" />
+      <workItem from="1583145968071" duration="416000" />
+      <workItem from="1583146515081" duration="134000" />
+      <workItem from="1583148436813" duration="591000" />
+      <workItem from="1584351322322" duration="4324000" />
     </task>
     <servers />
   </component>
@@ -254,14 +261,19 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2353" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582634414865" />
+    <state x="2240" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583146370941">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2240" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1583146370941" />
     <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582714264101">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582714264101" />
     <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581670534347" />
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1581669670409">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2340" y="276" key="FileChooserDialogImpl" timestamp="1584354843940">
+      <screen x="1600" y="0" width="1920" height="1040" />
     </state>
+    <state x="2340" y="276" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1584354843940" />
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581669670409" />
     <state x="672" y="237" key="MultipleFileMergeDialog" timestamp="1581582583576">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -272,15 +284,19 @@
     </state>
     <state x="2310" y="335" key="NewPhpClassDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582715816919" />
     <state x="710" y="335" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581593474374" />
-    <state x="2061" y="163" key="SettingsEditor" timestamp="1582567481280">
+    <state x="2061" y="163" key="SettingsEditor" timestamp="1583146362048">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2061" y="163" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582567481280" />
+    <state x="2061" y="163" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1583146362048" />
     <state x="2369" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582566607666">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2369" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582566607666" />
     <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581681185856" />
+    <state x="2216" y="240" key="run.anything.popup" timestamp="1584354172863">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2216" y="240" key="run.anything.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1584354172863" />
     <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582654105046">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>

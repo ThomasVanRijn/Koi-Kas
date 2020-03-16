@@ -1,4 +1,8 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
+{{ form_row(form.naam) }}
     <button class="btn">{{ button_label|default('Save') }}</button>
+{{ tinymce_init() }}
 {{ form_end(form) }}
+
+

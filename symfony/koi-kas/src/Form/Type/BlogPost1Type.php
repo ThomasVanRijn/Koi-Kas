@@ -21,7 +21,12 @@ class BlogPost1Type extends AbstractType
     {
         $builder
             ->add('naam', TextType::class)
-            ->add('verhaal', TextareaType::class)
+            ->add('verhaal', TextareaType::class,  array(
+                'attr' => array(
+                    'class' => 'tinymce',
+                    'data-theme' => 'bbcode' // Skip it if you want to use default theme
+                )
+            ))
             ->add('gaan', SubmitType::class)
 
         ;

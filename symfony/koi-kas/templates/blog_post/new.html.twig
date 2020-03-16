@@ -6,8 +6,7 @@
     <h1>Create new BlogPost</h1>
     <button><a href="">Foto's omzetten</a></button>
     {{ form_start(form) }}
-    {{ form_row(form.naam) }}
-    <button>test</button>
     {{ form_end(form) }}
     <a href="{{ path('blog_post_index') }}">back to list</a>
+    {{ tinymce_init({'theme': {'simple': {'menubar': false}}}) }}
 {% endblock %}
