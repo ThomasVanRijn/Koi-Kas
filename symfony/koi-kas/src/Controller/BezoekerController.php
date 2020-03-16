@@ -28,6 +28,29 @@ class BezoekerController extends AbstractController
     }
 
     /**
+     * @Route("/koi-karper", name="koi-karper")
+     */
+    public function koiKarper() {
+        $em = $this->getDoctrine()->getManager();
+
+        $producten = $em->getRepository(Karper::class)->findAll();
+
+        return $this->render('bezoeker/koi-karper.html.twig', [
+            'producten' => $producten
+        ]);
+    }
+
+    /**
+     * @Route("/koi-karper/{id}", name="karper_detail", methods={"GET","POST"})
+     */
+    public function karperDetail(Karper $Karper): Response
+    {
+        return $this->render('bezoeker/karper-detail.html.twig', [
+            'karper' => $Karper,
+        ]);
+    }
+
+    /**
      * @Route("/producten", name="producten")
      */
     public function producten()
@@ -175,18 +198,7 @@ class BezoekerController extends AbstractController
         throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
     }
 
-    /**
-     * @Route("/Koi-Karper", name="koiKarper")
-     */
-    public function KoiKarper() {
-        $em = $this->getDoctrine()->getManager();
 
-        $producten = $em->getRepository(Karper::class)->findAll();
-
-        return $this->render('bezoeker/koi-karper.html.twig', [
-            'producten' => $producten
-        ]);
-    }
 
 
 }

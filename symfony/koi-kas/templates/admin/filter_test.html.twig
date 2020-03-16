@@ -1,35 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    <!-- Libs CSS -->
-    <link rel="stylesheet" href="{{ asset("css/all.min.css") }}">
-    <link rel="stylesheet" href="{{ asset("css/jquery.fancybox.min.css") }}">
-    <link rel="stylesheet" href="{{ asset("css/flickity.min.css") }}">
-    <link rel="stylesheet" href="{{ asset("css/simplebar.min.css") }}">
-    <link rel="stylesheet" href="{{ asset("css/vs2015.css") }}">
-    <link rel="stylesheet" href="{{ asset("css/flickity-fade.css") }}">
-    <link rel="stylesheet" href="{{ asset("css/feather.css") }}">
-    <link rel="stylesheet" href="{{ asset("css/theme.min.css") }}">
-    <link rel="stylesheet" href="{{ asset("css/style.css") }}">
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'UA-154926440-1');
-
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script type="text/javascript" async="" src="./Shopper_files/analytics.js.download"></script> -->
-    <!-- <script async="" src="./Shopper_files/js"></script> -->
-{% endblock %}
-
 {% block main %}
     <div class="container">
         <div class="row">
@@ -51,7 +21,7 @@
                     <select name="kweker" class="custom-select" id="kweker">
                         <option value="*">Alle kwekers</option>
                         {% for kweker in kwekers %}
-                            <option value="{{kweker.naam}}">{{ kweker.naam }}</option>
+                            <option value="{{ kweker.naam }}">{{ kweker.naam }}</option>
                         {% endfor %}
                     </select>
                     <div class="input-group-prepend">
@@ -60,7 +30,7 @@
                     <select name="leeftijd" class="custom-select" id="leeftijd">
                         <option value="*">Alle leeftijden</option>
                         {% for leeftijd in leeftijden %}
-                            <option value="{{leeftijd.naam}}">{{ leeftijd.naam }}</option>
+                            <option value="{{ leeftijd.naam }}">{{ leeftijd.naam }}</option>
                         {% endfor %}
                     </select>
                     <div class="input-group-prepend">
@@ -70,51 +40,52 @@
 
                         <option value="*">Alle maten</option>
                         {% for maat in maten %}
-                            <option value="{{maat.naam}}">{{ maat.naam }}</option>
+                            <option value="{{ maat.naam }}">{{ maat.naam }}</option>
                         {% endfor %}
                     </select>
-
+                    <button type="submit" class="btn btn-primary btn-sm d-inline" style="height: 54px">Filter</button>
                 </div>
-                <button type="submit" class="btn btn-primary btn-sm">Filter</button>
             </form>
+        </div>
+
+        <br>
 
         <div class="row">
             {% for product in producten %}
+                <a href="{{ path('karper_detail', {'id': product.id }) }}">
+                    <div class="col-6 col-md-4">
 
-                <div class="col-6 col-md-4">
-
-                    <!-- Cards -->
-                    <div class="card mb-7">
-
-                        <!-- Image -->
-                        <div class="card-img">
+                        <!-- Cards -->
+                        <div class="card mb-7">
 
                             <!-- Image -->
-                            <img class="card-img-top card-img-back" src="{{ product.image }}" alt="...">
+                            <div class="card-img">
 
-                        </div>
+                                <!-- Image -->
+                                <img class="card-img-top card-img-back" src="{{ product.image }}" alt="...">
 
-                        <!-- Body -->
-                        <div class="card-body px-0">
-
-
-
-                            <!-- Title -->
-                            <div class="font-weight-bold">
-                                <a class="text-body" href="product.html">
-                                    {{ product.naam }}
-                                </a>
                             </div>
 
-                            <!-- Price -->
-                            <div class="font-weight-bold text-muted">
-                                &euro; {{ product.prijs }}
+                            <!-- Body -->
+                            <div class="card-body px-0">
+
+
+                                <!-- Title -->
+                                <div class="font-weight-bold">
+                                    <a class="text-body" href="product.html">
+                                        {{ product.naam }}
+                                    </a>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="font-weight-bold text-muted">
+                                    &euro; {{ product.prijs }}
+                                </div>
+
                             </div>
 
                         </div>
-
                     </div>
-                </div>
                 </a>
             {% endfor %}
         </div>

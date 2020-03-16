@@ -58,7 +58,7 @@
         <div class="container">
 
             <!-- Brand -->
-
+            {% block goback %}{% endblock %}
 
             <!-- Toggler -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -80,7 +80,7 @@
                     <li class="nav-item">
 
                         <!-- Toggle -->
-                        <a class="nav-link" href="{{ path('koiKarper') }}">Koi Karpers</a>
+                        <a class="nav-link" href="{{ path('koi-karper') }}">Koi Karpers</a>
 
                     </li>
                     <li class="nav-item dropdown position-static">
