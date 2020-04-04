@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20200226180729 extends AbstractMigration
+final class Version20200403090526 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -25,7 +25,7 @@ final class Version20200226180729 extends AbstractMigration
         $this->addSql('CREATE TABLE blog_post (id INT AUTO_INCREMENT NOT NULL, naam VARCHAR(255) NOT NULL, verhaal LONGTEXT NOT NULL, images LONGTEXT DEFAULT NULL COMMENT \'(DC2Type:array)\', PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE categorie (id INT AUTO_INCREMENT NOT NULL, naam VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE image (id INT AUTO_INCREMENT NOT NULL, naam VARCHAR(255) NOT NULL, string LONGTEXT NOT NULL, uri LONGTEXT NOT NULL, hoogte VARCHAR(255) NOT NULL, breedte VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
-        $this->addSql('CREATE TABLE karper (id INT AUTO_INCREMENT NOT NULL, soort_id INT NOT NULL, kweker_id INT NOT NULL, leeftijd_id INT NOT NULL, maat_id INT NOT NULL, naam VARCHAR(255) NOT NULL, image LONGTEXT NOT NULL, prijs NUMERIC(10, 2) NOT NULL, INDEX IDX_44E58F723DEE50DF (soort_id), INDEX IDX_44E58F722CF3838D (kweker_id), INDEX IDX_44E58F72CFEDAEC0 (leeftijd_id), INDEX IDX_44E58F726DAA5BB0 (maat_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE karper (id INT AUTO_INCREMENT NOT NULL, soort_id INT NOT NULL, kweker_id INT NOT NULL, leeftijd_id INT NOT NULL, maat_id INT NOT NULL, naam VARCHAR(255) NOT NULL, image LONGTEXT DEFAULT NULL, prijs NUMERIC(10, 2) NOT NULL, INDEX IDX_44E58F723DEE50DF (soort_id), INDEX IDX_44E58F722CF3838D (kweker_id), INDEX IDX_44E58F72CFEDAEC0 (leeftijd_id), INDEX IDX_44E58F726DAA5BB0 (maat_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE kweker (id INT AUTO_INCREMENT NOT NULL, naam VARCHAR(255) NOT NULL, zoek_naam VARCHAR(255) DEFAULT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE leeftijd (id INT AUTO_INCREMENT NOT NULL, naam VARCHAR(255) NOT NULL, zoek_naam VARCHAR(255) DEFAULT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE maat (id INT AUTO_INCREMENT NOT NULL, naam VARCHAR(255) NOT NULL, zoek_naam VARCHAR(255) DEFAULT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');

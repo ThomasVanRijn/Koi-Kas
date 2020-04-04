@@ -84,7 +84,7 @@ class BlogPostController extends AbstractController
      */
     public function delete(Request $request, BlogPost $blogPost): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$blogPost->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $blogPost->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($blogPost);
             $entityManager->flush();

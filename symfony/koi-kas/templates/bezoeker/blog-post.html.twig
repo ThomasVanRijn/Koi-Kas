@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <article class="pt-7">
+
+        <!-- HEADER -->
+        <header class="container">
+        <button class="btn" onclick="goBack()"><i class="fe fe-arrow-left ml-2"></i>Ga terug</button>
+            <div class="row">
+                <div class="col-12 text-center">
+
+                    <!-- Heading -->
+                    <h3 class="mb-3">{{ blogPost.naam }}</h3>
+
+                    {# <!-- Subheading --> #}
+                    {# <p class="mb-0 text-muted"> #}
+                    {# By Oliver Barrett in Company / July 18, 2019 #}
+                    {# </p> #}
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Image -->
+        <section class="pt-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+
+                        <!-- Image -->
+                        <img class="img-fluid" src="assets/img/blog/blog-9.jpg" alt="...">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="pt-10">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 font-size-lg text-gray-500">
+
+                        {{ blogPost.verhaal|raw }}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+    </script>
+{% endblock %}

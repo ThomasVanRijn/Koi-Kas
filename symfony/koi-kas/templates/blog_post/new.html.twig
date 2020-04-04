@@ -3,10 +3,12 @@
 {% block title %}New BlogPost{% endblock %}
 
 {% block main %}
-    <h1>Create new BlogPost</h1>
-    <button><a href="">Foto's omzetten</a></button>
-    {{ form_start(form) }}
-    {{ form_end(form) }}
-    <a href="{{ path('blog_post_index') }}">back to list</a>
-    {{ tinymce_init({'theme': {'simple': {'menubar': false}}}) }}
+    <div class="container">
+        <h1>Blog post aanmaken</h1>
+        <button><a href="">Foto's omzetten</a></button>
+        {{ form_start(form) }}
+        {{ form_end(form) }}
+        <a href="{{ path('blog_post_index') }}">back to list</a>
+        {{ tinymce_init({'theme': {'simple': {'menubar': false}}}) }}
+    </div>
 {% endblock %}

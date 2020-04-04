@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="container">
+        <h3 class="mb-7 text-center">Onze Blogs</h3>
+
+        <div class="row">
+            {% for blog_post in blog_posts %}
+                <div class="col-12 col-md-6">
+
+                    <!-- Card -->
+                    <div class="card mb-7">
+
+{#                        <!-- Badge -->#}
+{#                        <div class="badge badge-white card-badge">#}
+{#                            <time class="text-uppercase" datetime="2019-06-20">Jun 20</time>#}
+{#                        </div>#}
+
+                        <!-- Image -->
+                        <img class="card-img-top" src="https://via.placeholder.com/500" alt="">
+
+                        <!-- Body -->
+                        <div class="card-body px-0">
+
+                            <!-- Heading -->
+                            <h5>{{ blog_post.naam }}</h5>
+
+                            <!-- Text -->
+                            <div class="mb-0 text-gray-500" style="max-height: 100px; overflow: hidden">
+                                {{ blog_post.verhaal|raw }}
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn btn-link stretched-link px-0 text-reset"
+                               href="{{ path('blog_detail', {'id': blog_post.id}) }}">
+                                Meer lezen <i class="fe fe-arrow-right ml-2"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

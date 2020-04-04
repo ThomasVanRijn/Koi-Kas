@@ -7,6 +7,7 @@
         "ext-iconv": "*",
         "hshn/base64-encoded-file": "^2.0",
         "sensio/framework-extra-bundle": "^5.1",
+        "stfalcon/tinymce-bundle": "*",
         "symfony/asset": "4.4.*",
         "symfony/console": "4.4.*",
         "symfony/dotenv": "4.4.*",
@@ -30,7 +31,7 @@
         "symfony/web-server-bundle": "4.4.*",
         "symfony/webpack-encore-bundle": "^1.7",
         "symfony/yaml": "4.4.*",
-        "stfalcon/tinymce-bundle": "*"
+        "twig/twig": "~2.0"
     },
     "require-dev": {
         "symfony/debug-pack": "*",

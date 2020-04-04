@@ -4,11 +4,13 @@
 namespace App\Controller;
 
 
+use App\Entity\BlogPost;
 use App\Entity\Categorie;
 use App\Entity\Karper;
 use App\Entity\Product;
 use App\Entity\User;
 use App\Form\UserType;
+use App\Repository\BlogPostRepository;
 use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -171,6 +173,26 @@ class BezoekerController extends AbstractController
     {
         return $this->render("bezoeker/links.html.twig");
     }
+
+    /**
+     * @Route("/blogs", name="blogs")
+     */
+    public function blogs(BlogPostRepository $blogPostRepository): Response
+    {
+        return $this->render("bezoeker/blogs.html.twig", [
+            'blog_posts' => $blogPostRepository->findAll(),
+        ]);
+    }
+    /**
+     * @Route("/blog/{id}", name="blog_detail", methods={"GET","POST"})
+     */
+    public function blogPost(BlogPost $blogPost): Response
+    {
+        return $this->render('bezoeker/blog-post.html.twig', [
+            'blogPost' => $blogPost,
+        ]);
+    }
+
 
 
     /**

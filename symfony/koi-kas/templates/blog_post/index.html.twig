@@ -3,39 +3,45 @@
 {% block title %}BlogPost index{% endblock %}
 
 {% block main %}
-    <h1>BlogPost index</h1>
+    <div class="container">
+        <h1>Blogs</h1>
 
-   <button class="btn btn-primary"> <a style="color:white; text-decoration: none;" href="{{ path('blog_post_new') }}">Nieuwe blog maken</a> </button> <br>
-    <table class="table">
-        <thead>
-        <tr>
-            <h3>Naam</h3>
-        </tr>
-        </thead>
-        <tbody>
-        {% for blog_post in blog_posts %}
+        <button class="btn btn-primary"><a style="color:white; text-decoration: none;"
+                                           href="{{ path('blog_post_new') }}">Nieuwe blog maken</a></button>
+        <br>
+        <table class="table">
+            <thead>
             <tr>
-                <td>{{ blog_post.naam }}</td>
-                <td> Upload datum</td>
-                <td>
-                    <button class="btn btn-primary">
-                        <a style="color:white; text-decoration: none;" href="{{ path('blog_post_show', {'id': blog_post.id}) }}">bekijken</a>
-                    </button>
-                    <button class="btn btn-primary">
-                        <a style="color:white; text-decoration: none;" href="{{ path('blog_post_edit', {'id': blog_post.id}) }}">bewerken</a>
-                    </button>
-                    <button class="btn btn-primary">
-                        <a style="color:white; text-decoration: none;" href="">Verwijderen</a>
-                    </button>
-                </td>
+                <h3>Naam</h3>
+            </tr>
+            </thead>
+            <tbody>
+            {% for blog_post in blog_posts %}
+                <tr>
+                    <td>{{ blog_post.naam }}</td>
+                    <td> Upload datum</td>
+                    <td>
+                        <button class="btn btn-primary">
+                            <a style="color:white; text-decoration: none;"
+                               href="{{ path('blog_post_show', {'id': blog_post.id}) }}">bekijken</a>
+                        </button>
+                        <button class="btn btn-primary">
+                            <a style="color:white; text-decoration: none;"
+                               href="{{ path('blog_post_edit', {'id': blog_post.id}) }}">bewerken</a>
+                        </button>
+                        <button class="btn btn-primary">
+                            <a style="color:white; text-decoration: none;" href="">Verwijderen</a>
+                        </button>
+                    </td>
 
 
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}
