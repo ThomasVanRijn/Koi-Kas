@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1186cccd-033d-4a32-b0aa-b0a8f48b6b20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200404120144.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BlogPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BlogPostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bezoeker/blog-post.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/blog-post.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bezoeker/blogs.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/blogs.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog_post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog_post/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/home.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,6 +215,14 @@
       <workItem from="1585904195719" duration="7861000" />
       <workItem from="1585994002135" duration="7324000" />
     </task>
+    <task id="LOCAL-00001" summary="blog submit naar goede blog index pagina">
+      <created>1586001866646</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586001866646</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +244,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Contact pagina gemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Contact pagina gemaakt" />
+    <MESSAGE value="blog submit naar goede blog index pagina" />
+    <option name="LAST_COMMIT_MESSAGE" value="blog submit naar goede blog index pagina" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="183" key="#Inspections" timestamp="1581669890420">
