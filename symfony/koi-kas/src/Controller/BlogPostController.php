@@ -40,7 +40,7 @@ class BlogPostController extends AbstractController
             $entityManager->persist($blogPost);
             $entityManager->flush();
 
-            return $this->redirectToRoute('blog_post_index');
+            return $this->redirectToRoute('blogs');
         }
 
         return $this->render('blog_post/new.html.twig', [

@@ -3,6 +3,12 @@
 {% block main %}
     <div class="container">
         <h3 class="mb-7 text-center">Onze Blogs</h3>
+{#        {% if is_granted('ROLE_ADMIN') %}#}
+            <a href="{{ path('blog_post_new') }}">
+                <button class="btn btn-secondary">Nieuwe post</button>
+            </a>
+{#        {% endif %}#}
+        <br><br>
 
         <div class="row">
             {% for blog_post in blog_posts %}
@@ -11,10 +17,10 @@
                     <!-- Card -->
                     <div class="card mb-7">
 
-{#                        <!-- Badge -->#}
-{#                        <div class="badge badge-white card-badge">#}
-{#                            <time class="text-uppercase" datetime="2019-06-20">Jun 20</time>#}
-{#                        </div>#}
+                        {#                        <!-- Badge -->#}
+                        {#                        <div class="badge badge-white card-badge">#}
+                        {#                            <time class="text-uppercase" datetime="2019-06-20">Jun 20</time>#}
+                        {#                        </div>#}
 
                         <!-- Image -->
                         <img class="card-img-top" src="https://via.placeholder.com/500" alt="">

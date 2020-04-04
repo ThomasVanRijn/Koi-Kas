@@ -2,37 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1186cccd-033d-4a32-b0aa-b0a8f48b6b20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/blogImages/WhatsApp Image 2020-03-16 at 09.29.23 _2_.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/blogImages/price (1).jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/blogImages/price (2)-jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/blogImages/price (2).jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/blogImages/price.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/blogImages/price.tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/blogImages/test-jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/BlogImageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/BlogImage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Images.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/BlogImageType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/BlogImageRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ImagesRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blog_image/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blog_image/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blog_image/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blog_image/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blog_image/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blog_image/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/koi-kas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/koi-kas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200404120144.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BlogPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BlogPostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/BlogPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/BlogPost.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Karper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Karper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Kweker.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Leeftijd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Maat.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Soort.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200403090526.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200404114802.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/bezoeker/blog-post.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/blog-post.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/blogs.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/blogs.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/blog_post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog_post/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -199,6 +173,18 @@
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\public\img" />
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\public\css" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
