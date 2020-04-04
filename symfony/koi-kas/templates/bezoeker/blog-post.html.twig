@@ -43,6 +43,9 @@
 
                         {{ blogPost.verhaal|raw }}
                     </div>
+                    {% for images in blogPost.images %}
+                    <img src="{{ asset(images.filepath) }}">
+                    {% endfor %}
                 </div>
             </div>
         </section>

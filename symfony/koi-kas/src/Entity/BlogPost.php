@@ -2,7 +2,10 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+
 use Symfony\Component\Serializer\Normalizer\DataUriNormalizer;
 use Symfony\Component\Serializer\Serializer;
 
@@ -29,7 +32,7 @@ class BlogPost
     private $verhaal;
 
     /**
-     * @ORM\Column(type="array", nullable=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\BlogImage", mappedBy="blog")
      */
     private $images = [];
 
@@ -37,6 +40,7 @@ class BlogPost
     {
         $this->serializer = new Serializer();
         $this->normalizer = new DataUriNormalizer();
+        $this->blogImages = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -68,7 +72,10 @@ class BlogPost
         return $this;
     }
 
-    public function getImages(): ?array
+    /**
+     * @return Collection|Images[]
+     */
+    public function getImages(): Collection
     {
         return $this->images;
     }
@@ -78,6 +85,37 @@ class BlogPost
         $normalizer = new DataUriNormalizer();
         $images = $normalizer->normalize($images);
         $this->images = $images;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|BlogImage[]
+     */
+    public function getBlogImages(): Collection
+    {
+        return $this->blogImages;
+    }
+
+    public function addBlogImage(BlogImage $blogImage): self
+    {
+        if (!$this->blogImages->contains($blogImage)) {
+            $this->blogImages[] = $blogImage;
+            $blogImage->setBlog($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBlogImage(BlogImage $blogImage): self
+    {
+        if ($this->blogImages->contains($blogImage)) {
+            $this->blogImages->removeElement($blogImage);
+            // set the owning side to null (unless already changed)
+            if ($blogImage->getBlog() === $this) {
+                $blogImage->setBlog(null);
+            }
+        }
 
         return $this;
     }

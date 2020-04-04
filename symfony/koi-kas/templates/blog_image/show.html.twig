@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BlogImage{% endblock %}
+
+{% block main %}
+    <h1>BlogImage</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ blog_image.id }}</td>
+            </tr>
+            <tr>
+                <th>Naam</th>
+                <td>{{ blog_image.naam }}</td>
+            </tr>
+            <tr>
+                <th>File_naam</th>
+                <td>{{ blog_image.fileNaam }}</td>
+            </tr>
+            <tr>
+                <th>File_path</th>
+                <td>{{ blog_image.filePath }}</td>
+            </tr>
+            <tr>
+                <th>Extension</th>
+                <td>{{ blog_image.extension }}</td>
+            </tr>
+        </tbody>
+    </table>
+        <img src="{{asset(blog_image.filePath)  }}">
+    <a href="{{ path('blog_image_index') }}">back to list</a>
+
+    <a href="{{ path('blog_image_edit', {'id': blog_image.id}) }}">edit</a>
+
+    {{ include('blog_image/_delete_form.html.twig') }}
+{% endblock %}

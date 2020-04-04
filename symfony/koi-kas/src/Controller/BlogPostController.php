@@ -22,7 +22,7 @@ class BlogPostController extends AbstractController
     public function index(BlogPostRepository $blogPostRepository): Response
     {
         return $this->render('blog_post/index.html.twig', [
-            'blog_posts' => $blogPostRepository->findAll(),
+            'blog_images' => $blogPostRepository->findAll(),
         ]);
     }
 
@@ -80,7 +80,7 @@ class BlogPostController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="blog_post_delete", methods={"DELETE"})
+     * @Route("/delete/{id}", name="blog_post_delete", methods={"DELETE"})
      */
     public function delete(Request $request, BlogPost $blogPost): Response
     {
