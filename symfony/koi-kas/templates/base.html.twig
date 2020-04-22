@@ -57,9 +57,6 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
 
-            <!-- Brand -->
-{#            {% block goback %}{% endblock %}#}
-
             <!-- Toggler -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -260,31 +257,31 @@
                     </li>
 
                     {% if is_granted('ROLE_ADMIN') %}
-                    <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
 
-                        <!-- Toggle -->
-                        <a class="nav-link" data-toggle="dropdown"
-                           href="https://yevgenysim.github.io/shopper/index.html#">Blogs</a>
+                            <!-- Toggle -->
+                            <a class="nav-link" data-toggle="dropdown"
+                               href="https://yevgenysim.github.io/shopper/index.html#">Blogs</a>
 
-                        <!-- Menu -->
-                        <div class="dropdown-menu">
-                            <div class="card card-lg">
-                                <div class="card-body">
-                                    <ul class="list-styled font-size-sm">
-                                        <li class="list-styled-item">
-                                            <a class="list-styled-link"
-                                               href="https://yevgenysim.github.io/shopper/blog.html">Blog</a>
-                                        </li>
-                                        <li class="list-styled-item">
-                                            <a class="list-styled-link"
-                                               href="https://yevgenysim.github.io/shopper/blog-post.html">Blog Post
-                                                Toevoegen</a>
-                                        </li>
-                                    </ul>
+                            <!-- Menu -->
+                            <div class="dropdown-menu">
+                                <div class="card card-lg">
+                                    <div class="card-body">
+                                        <ul class="list-styled font-size-sm">
+                                            <li class="list-styled-item">
+                                                <a class="list-styled-link"
+                                                   href="https://yevgenysim.github.io/shopper/blog.html">Blog</a>
+                                            </li>
+                                            <li class="list-styled-item">
+                                                <a class="list-styled-link"
+                                                   href="https://yevgenysim.github.io/shopper/blog-post.html">Blog Post
+                                                    Toevoegen</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
+                        </li>
                     {% else %}
                         <li class="nav-item">
 
@@ -307,6 +304,10 @@
                     {% endif %}
                 </ul>
             </div>
+
+            {% if is_granted("ROLE_ADMIN") %}
+                <a class="btn btn-secondary" href="app_logout">Uitloggen</a>
+            {% endif %}
 
         </div>
     </nav>
@@ -343,13 +344,13 @@
                 </div>
             </div>
             <div class="pt-6 pb-2">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col">
 
                             <!-- Copyright -->
                             <p class="mb-3 mb-md-0 font-size-xxs text-muted">
-                                © 2020 All rights reserved. Created by TMN-Web.
+                                © 2020 All rights reserved. Created by <a class="text-gray-300" href="https://www.tmn-web.com" target="_blank">TMN-Web</a>.
                             </p>
 
                         </div>

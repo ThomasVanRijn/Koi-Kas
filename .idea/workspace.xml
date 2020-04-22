@@ -2,16 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bf43fbf-b8ca-488a-91ef-74bae1c414d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/karper-detail.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/product/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/product/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/product/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/product/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/product/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/.env" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/BezoekerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/src/Controller/BezoekerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/karper-detail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/karper-detail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Form/Type/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/src/Form/Type/ProductType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Form/Type/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/src/Form/Type/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/src/Security/UserAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/src/Security/UserAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/product.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/product/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/product_wijzigen.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/product/delete.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/producten.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/producten_toevoegen.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/product/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/koi-karper.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/koi-karper.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/producten.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/producten.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/product-detail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/producten.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/bezoeker/product/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/user/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/user/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/user/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/user/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/koi-kas/templates/user/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/koi-kas/templates/admin/user/new.html.twig" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,30 +65,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/symfony/koi-kas" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Github\Koi-Kas\symfony\koi-kas\public\js\editor" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\templates\bezoeker" />
       <recent name="C:\xampp\htdocs\Koi-Kas\symfony\koi-kas\templates\admin" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Github\Koi-Kas\symfony\koi-kas\public\js\editor" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -99,6 +103,7 @@
       <workItem from="1582637717261" duration="261000" />
       <workItem from="1582740258629" duration="3250000" />
       <workItem from="1582989110906" duration="1691000" />
+      <workItem from="1587547287623" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="responsive">
       <created>1581508583572</created>
@@ -167,10 +172,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581508582540" />
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1581591567101">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="987" y="372" key="FileChooserDialogImpl" timestamp="1587547337479">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581591567101" />
+    <state x="987" y="372" key="FileChooserDialogImpl/0.0.2560.1400/-1920.251.1920.1040/2560.251.1920.1040@0.0.2560.1400" timestamp="1587547337479" />
     <state x="184" y="92" key="MergeDialog" timestamp="1581508556986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

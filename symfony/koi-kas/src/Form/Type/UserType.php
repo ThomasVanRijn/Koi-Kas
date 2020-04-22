@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,10 +19,9 @@ class UserType extends AbstractType
                 'attr' => ['class' => 'f_reg'],
                 'label' => 'Gebruikersnaam'
             ])
-            ->add('password', TextType::class, [
+            ->add('password', PasswordType::class, [
                 'attr' => ['class' => 'f_reg'],
                 'label' => 'Wachtwoord',
-                'data' => 'Wachtwoord'
             ])
         ->add('Gaan', SubmitType::class);
     }

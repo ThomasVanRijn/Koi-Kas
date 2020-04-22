@@ -43,10 +43,13 @@ class AdminController extends AbstractController
         return $this->render('admin/home.html.twig');
     }
 
+
+    //USER CRUD
+
     /**
      * @Route("/user/overzicht", name="user_index", methods={"GET"})
      */
-    public function index(UserRepository $userRepository): Response
+    public function userIndex(UserRepository $userRepository): Response
     {
         return $this->render('user/index.html.twig', [
             'users' => $userRepository->findAll(),
@@ -54,9 +57,9 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/user/new")
+     * @Route("/user/new", name="user_new")
      */
-    public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder)
+    public function userNew(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
@@ -72,7 +75,7 @@ class AdminController extends AbstractController
             return $this->redirectToRoute('homepage');
         }
 
-        return $this->render('user/new.html.twig', [
+        return $this->render('admin/user/new.html.twig', [
             'form' => $form->createView(),
         ]);
     }
@@ -80,7 +83,7 @@ class AdminController extends AbstractController
     /**
      * @Route("/user/show/{id}", name="user_show", methods={"GET"})
      */
-    public function show(User $user): Response
+    public function userShow(User $user): Response
     {
         return $this->render('user/show.html.twig', [
             'user' => $user,
@@ -90,7 +93,7 @@ class AdminController extends AbstractController
     /**
      * @Route("/user/edit/{id}", name="user_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, User $user): Response
+    public function userEdit(Request $request, User $user): Response
     {
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
@@ -110,7 +113,7 @@ class AdminController extends AbstractController
     /**
      * @Route("/user/delete/{id}", name="user_delete", methods={"DELETE"})
      */
-    public function delete(Request $request, User $user): Response
+    public function userDelete(Request $request, User $user): Response
     {
         if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
@@ -120,6 +123,126 @@ class AdminController extends AbstractController
 
         return $this->redirectToRoute('user_index');
     }
+
+
+    //PRODUCT CRUD
+
+    /**
+     * @Route("/producten/overzicht", name="product_index")
+     */
+    public function productIndex() {
+        $em = $this->getDoctrine()->getManager();
+        $producten = $em->getRepository(Product::class)->findAll();
+        return $this->render("admin/product/index.html.twig", [
+            'producten' => $producten
+        ]);
+    }
+
+    /**
+     * @Route("/producten/toevoegen", name="product_new")
+     */
+    public function productNew(Request $request) {
+        $em = $this->getDoctrine()->getManager();
+        $product = new Product();
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()) {
+            $image = $form->get('image')->getData();
+            if($image) {
+                $uri = $product->setUri($image);
+
+                $product->setImage($uri->getUri());
+            }
+            $product = $form->getData();
+            $em->persist($product);
+            $em->flush();
+            return $this->redirectToRoute('admin_product_index');
+        }
+
+        return $this->render('admin/product/new.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/producten/{id}", name="product_show")
+     */
+    public function productShow($id) {
+        $em = $this->getDoctrine()->getManager();
+        $producten = $em->getRepository(Product::class)->findBy([
+            'id' => $id
+        ]);
+
+        $producten = $producten[0];
+        return $this->render('admin/product/show.html.twig', [
+            'product' => $producten
+        ]);
+    }
+
+//    /**
+//     * @Route("/product/wijzigen/{id}", name="product_edit")
+//     */
+//    public function productEdit(Request $request, $id) {
+//
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $product = $em->getRepository(Product::class)->find($id);
+//
+//        $form = $this->createForm(ProductType::class, $product);
+//        $form->handleRequest($request);
+//
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $product=$form->getData();
+//
+//            $entityManager=$this->getDoctrine()->getManager();
+//            $entityManager->persist($product);
+//            $entityManager->flush();
+//            return $this->redirectToRoute('admin_product_index');
+//        }
+//
+//        return $this->render('admin/product/edit.html.twig', [
+//            'form' => $form->createView(),
+//            'product' => $product
+//        ]);
+//
+//    }
+
+    /**
+     * @Route("/product/{id}/edit", name="product_edit", methods={"GET","POST"})
+     */
+    public function edit(Request $request, Product $product): Response
+    {
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('admin_product_index');
+        }
+
+        return $this->render('admin/product/edit.html.twig', [
+            'product' => $product,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("product/delete/{id}", name="product_delete", methods={"DELETE"})
+     */
+    public function productDelete(Request $request, Product $product): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$product->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($product);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('admin_product_index');
+    }
+
+
+
 
     /**
      * @Route("/image/new", name="new_image")
@@ -161,7 +284,6 @@ class AdminController extends AbstractController
     /**
      * @Route("/uploadFile", name="uploadFile")
      */
-
     public function uploadFile(Request $request, LoggerInterface $logger): Response {
         $image = $_FILES['image'];
 
@@ -178,88 +300,6 @@ class AdminController extends AbstractController
 
 // prints the HTTP headers followed by the content
         return $response;
-    }
-
-    /**
-     * @Route("/producten", name="admin_producten")
-     */
-    public function adminProducten() {
-        $em = $this->getDoctrine()->getManager();
-        $producten = $em->getRepository(Product::class)->findAll();
-        return $this->render("admin/producten.html.twig", [
-            'producten' => $producten
-        ]);
-    }
-
-    /**
-     * @Route("/producten/toevoegen", name="product_toevoegen")
-     */
-    public function add_product(Request $request) {
-        $em = $this->getDoctrine()->getManager();
-        $product = new Product();
-        $form = $this->createForm(ProductType::class, $product);
-        $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid()) {
-            $image = $form->get('image')->getData();
-            if($image) {
-                $uri = $product->setUri($image);
-
-                $product->setImage($uri->getUri());
-            }
-            $product = $form->getData();
-            $em->persist($product);
-            $em->flush();
-            return $this->redirectToRoute('admin_producten');
-        }
-
-        return $this->render('admin/producten_toevoegen.html.twig', [
-            'form' => $form->createView()
-        ]);
-    }
-
-    /**
-     * @Route("/producten/wijzigen/{id}", name="product_wijzigen")
-     */
-
-    public function product_wijzigen(Request $request, $id) {
-
-        $em = $this->getDoctrine()->getManager();
-
-        $product = $em->getRepository(Product::class)->find($id);
-
-        $form = $this->createForm(ProductType::class, $product);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $product=$form->getData();
-
-            $entityManager=$this->getDoctrine()->getManager();
-            $entityManager->persist($product);
-            $entityManager->flush();
-            return $this->redirectToRoute('admin_producten');
-        }
-
-        return $this->render('admin/product_wijzigen.html.twig', [
-            'form' => $form->createView(),
-            'product' => $product
-        ]);
-
-    }
-
-    /**
-     * @Route("/producten/{id}", name="admin_product")
-     */
-
-    public function product($id) {
-        $em = $this->getDoctrine()->getManager();
-        $producten = $em->getRepository(Product::class)->findBy([
-            'id' => $id
-        ]);
-
-        $producten = $producten[0];
-        return $this->render('admin/product.html.twig', [
-            'product' => $producten
-        ]);
     }
 
     /**

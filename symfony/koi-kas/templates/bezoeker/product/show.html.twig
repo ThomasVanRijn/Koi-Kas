@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+
+                            <!-- Card -->
+                            <div class="card">
+
+                                <div>
+                                    <img class="card-img-top" src="{{ product.image }}" alt="">
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-md-6 pl-lg-10">
+
+                            <!-- Header -->
+                            <div class="row mb-1">
+                                <div class="col">
+
+                                    <!-- Preheading -->
+                                    <a class="text-muted" href="shop.html">{{ product.categorie.naam|capitalize }}</a>
+
+                                </div>
+                            </div>
+
+                            <!-- Heading -->
+                            <h3 class="mb-2">{{ product.naam }}</h3>
+
+                            <!-- Price -->
+                            <div class="mb-7">
+                                <span class="ml-1 font-size-h5 font-weight-bolder text-primary">&euro; {{ product.prijs }}</span>
+                            </div>
+
+                            <!-- Form -->
+                            <form>
+                                <div class="form-group">
+
+                                    <div class="form-row mb-7">
+                                        <!-- Submit -->
+                                        <button class="btn btn-dark">Bestellen</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- Nav -->
+                    <div class="text-center">
+                        <h6>
+                            Beschrijving
+                        </h6>
+                    </div>
+
+                    <hr>
+
+                    <!-- Content -->
+                    <div class="container">
+                        <p>{{ product.beschrijving }}</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="text-center">
+                        <h6>
+                            Andere {{ product.categorie.naam }}
+                        </h6>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+
+                            {% set count = 0 %}
+                            {% set productid = product.id %}
+                            {% for product in overigeProducten %}
+                                {% if count < 4 and product.id != productid %}
+                                    <div class="col-3">
+                                        <a href="{{ path('product_detail', {'naam': product.categorie.naam , 'id': product.id }) }}">
+                                            <div class="card mb-7">
+                                                <div class="card-img">
+                                                    <img class="card-img-top card-img-back" src="{{ product.image }}"
+                                                         alt="...">
+                                                </div>
+
+                                                <div class="card-body px-0">
+                                                    <div class="font-size-xs">
+                                                        <p class="text-muted m-0">{{ product.categorie.naam }}</p>
+                                                    </div>
+
+                                                    <div class="font-weight-bold" style="color: black;">
+                                                        {{ product.naam }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% set count = count + 1 %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -52,6 +52,9 @@ class BezoekerController extends AbstractController
         ]);
     }
 
+
+    //PRODUCTEN
+
     /**
      * @Route("/producten", name="producten")
      */
@@ -60,7 +63,7 @@ class BezoekerController extends AbstractController
         $em = $this->getDoctrine()->getManager();
         $producten = $em->getRepository(Product::class)->findAll();
 
-        return $this->render("bezoeker/producten.html.twig", [
+        return $this->render("bezoeker/product/index.html.twig", [
             'producten' => $producten
         ]);
     }
@@ -77,7 +80,7 @@ class BezoekerController extends AbstractController
         $producten = $producten[0];
         $product = $producten->getProducts();
 
-        return $this->render('bezoeker/producten.html.twig', [
+        return $this->render('bezoeker/product/index.html.twig', [
             'producten' => $product
         ]);
     }
@@ -94,12 +97,15 @@ class BezoekerController extends AbstractController
         $overigeProducten = $overigeProducten[0];
         $overigeProducten = $overigeProducten->getProducts();
 
-        return $this->render('bezoeker/product-detail.html.twig', [
+        return $this->render('bezoeker/product/show.html.twig', [
             'product' => $product,
             'producten' => $productRepository,
             'overigeProducten' => $overigeProducten
         ]);
     }
+
+
+
 
     /**
      * @Route("/koi-dokter", name="koi-dokter")

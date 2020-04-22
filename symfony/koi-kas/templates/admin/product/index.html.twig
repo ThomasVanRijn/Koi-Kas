@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="container-fluid" style="max-width: 1500px">
+
+        <h1>Product Beheer</h1>
+
+        <a class="btn btn-success" href="{{ path('admin_product_new') }}">Create new</a>
+        <br><br>
+        <table class="table table-responsive-lg table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Naam</th>
+                <th>Categorie</th>
+                <th>Prijs</th>
+                <th>Beschrijving</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for product in producten %}
+                <tr>
+                    <td>{{ product.id }}</td>
+                    <td><img src="{{ product.image }}" alt="" width="50"></td>
+                    <td>{{ product.naam }}</td>
+                    <td>{{ product.categorie.naam }}</td>
+                    <td>{{ product.prijs }}</td>
+                    <td>{{ product.beschrijving|length > 150 ? product.beschrijving|slice(0, 150) ~ '...' : product.beschrijving  }}</td>
+                    <td style="min-width: 341px;">
+                        <a class="btn btn-success" href="{{ path('admin_product_show', {'id': product.id}) }}">show</a>
+                        <a class="btn btn-warning" href="{{ path('admin_product_edit', {'id': product.id}) }}">edit</a>
+                        {{ include('admin/product/_delete_form.html.twig') }}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">Geen producten gevonden</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+{% endblock %}

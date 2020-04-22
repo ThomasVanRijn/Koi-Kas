@@ -20,16 +20,27 @@ class ProductType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('naam', TextType::class)
+            ->add('naam', TextType::class, [
+                'attr' => ['autocomplete' => 'off']
+            ])
             ->add('categorie', EntityType::class, [
                 'class' => Categorie::class,
                 'choice_label' => function(Categorie $cat)  {
                     return sprintf('%s', $cat->__toString());
-                } , 'label' => 'Categorie    '
+                } , 'label' => 'Categorie',
+                'attr' => ['autocomplete' => 'off'],
+                'required' => true
             ])
-            ->add('prijs', MoneyType::class)
-            ->add('beschrijving', TextType::class)
+            ->add('prijs', MoneyType::class, [
+                'attr' => ['autocomplete' => 'off'],
+                'required' => true
+            ])
+            ->add('beschrijving', TextType::class, [
+                'attr' => ['autocomplete' => 'off'],
+                'required' => true
+            ])
             ->add('image', FileType::class, [
+                'attr' => ['autocomplete' => 'off'],
                 'label' => 'foto',
 
                 // unmapped means that this field is not associated to any entity property
@@ -37,7 +48,7 @@ class ProductType extends AbstractType
 
                 // make it optional so you don't have to re-upload the PDF file
                 // everytime you edit the Product details
-                'required' => false,
+                'required' => true,
 
                 // unmapped fields can't define their validation using annotations
                 // in the associated entity, so you can use the PHP constraint classes

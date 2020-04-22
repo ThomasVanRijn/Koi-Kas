@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h1>Product bewerken</h1>
+
+        {{ include('admin/product/_form.html.twig', {'button_label': 'Update'}) }}
+
+
+        <div style="margin-top: 5px">
+            <a class="btn btn-success" href="{{ path('admin_product_index') }}">Terug naar
+                lijst</a>
+
+            {{ include('admin/product/_delete_form.html.twig') }}
+        </div>
+    </div>
+{% endblock %}
