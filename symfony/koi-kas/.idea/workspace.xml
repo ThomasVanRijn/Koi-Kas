@@ -2,33 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1186cccd-033d-4a32-b0aa-b0a8f48b6b20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/admin/product/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/product/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/product/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/product/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bezoeker/product/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BezoekerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BezoekerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Type/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Type/ProductType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Type/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Type/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/UserAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/UserAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_wijzigen.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product/delete.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/producten.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/producten_toevoegen.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bezoeker/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bezoeker/product-detail.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bezoeker/producten.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/product/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/karpers_beheren.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/karpers_beheren.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,6 +217,9 @@
       <workItem from="1587460367401" duration="34000" />
       <workItem from="1587460988113" duration="516000" />
       <workItem from="1587547339740" duration="5570000" />
+      <workItem from="1595515177788" duration="112000" />
+      <workItem from="1595529968889" duration="1004000" />
+      <workItem from="1595783190542" duration="3706000" />
     </task>
     <task id="LOCAL-00001" summary="blog submit naar goede blog index pagina">
       <created>1586001866646</created>
@@ -272,69 +254,33 @@
     <option name="LAST_COMMIT_MESSAGE" value="blog submit naar goede blog index pagina" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1032" y="183" key="#Inspections" timestamp="1581669890420">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1032" y="183" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1581669890420" />
-    <state x="552" y="179" key="#Intentions" timestamp="1581671712201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="179" key="#Intentions/0.0.1920.1040@0.0.1920.1040" timestamp="1581671712201" />
-    <state x="2152" y="179" key="#Notifications" timestamp="1582192599674">
-      <screen x="1600" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2152" y="179" key="#Notifications/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582192599674" />
-    <state x="2768" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585996696113">
-      <screen x="1600" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2768" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1585996696113" />
-    <state x="1168" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581417977270" />
-    <state x="2353" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1582634414865">
-      <screen x="1600" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2353" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582634414865" />
-    <state x="2240" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583146370941">
-      <screen x="1600" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2240" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1583146370941" />
     <state x="920" y="372" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586943022810">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="2290" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1585998059097" />
-    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581670534347" />
     <state x="920" y="372" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1400/-1920.251.1920.1040/2560.251.1920.1040@0.0.2560.1400" timestamp="1586943022810" />
     <state x="987" y="372" key="FileChooserDialogImpl" timestamp="1587461499230">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="2340" y="276" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1584354843940" />
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581669670409" />
     <state x="987" y="372" key="FileChooserDialogImpl/0.0.2560.1400/-1920.251.1920.1040/2560.251.1920.1040@0.0.2560.1400" timestamp="1587461499230" />
-    <state x="672" y="237" key="MultipleFileMergeDialog" timestamp="1581582583576">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1595515241214">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="672" y="237" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581582583576" />
-    <state x="2310" y="335" key="NewPhpClassDialog" timestamp="1582715816919">
-      <screen x="1600" y="0" width="1920" height="1040" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/-1920.252.1920.1040/0.0.2560.1400/2560.252.1920.1040@0.0.2560.1400" timestamp="1595515241214" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1595515241214">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="2310" y="335" key="NewPhpClassDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582715816919" />
-    <state x="710" y="335" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581593474374" />
-    <state x="2061" y="163" key="SettingsEditor" timestamp="1585994330699">
-      <screen x="1600" y="0" width="1920" height="1040" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center/-1920.252.1920.1040/0.0.2560.1400/2560.252.1920.1040@0.0.2560.1400" timestamp="1595515241214" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1595515241214">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="2061" y="163" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1585994330699" />
-    <state x="2369" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582566607666">
-      <screen x="1600" y="0" width="1920" height="1040" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left/-1920.252.1920.1040/0.0.2560.1400/2560.252.1920.1040@0.0.2560.1400" timestamp="1595515241214" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1595515241214">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="2369" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582566607666" />
-    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581681185856" />
-    <state x="2216" y="240" key="run.anything.popup" timestamp="1584354172863">
-      <screen x="1600" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2216" y="240" key="run.anything.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1584354172863" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/-1920.252.1920.1040/0.0.2560.1400/2560.252.1920.1040@0.0.2560.1400" timestamp="1595515241214" />
     <state x="831" y="303" width="896" height="913" key="search.everywhere.popup" timestamp="1586943267018">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1582654105046" />
     <state x="831" y="303" width="896" height="913" key="search.everywhere.popup/0.0.2560.1400/-1920.251.1920.1040/2560.251.1920.1040@0.0.2560.1400" timestamp="1586943267018" />
   </component>
 </project>

@@ -179,38 +179,10 @@ class AdminController extends AbstractController
         ]);
     }
 
-//    /**
-//     * @Route("/product/wijzigen/{id}", name="product_edit")
-//     */
-//    public function productEdit(Request $request, $id) {
-//
-//        $em = $this->getDoctrine()->getManager();
-//
-//        $product = $em->getRepository(Product::class)->find($id);
-//
-//        $form = $this->createForm(ProductType::class, $product);
-//        $form->handleRequest($request);
-//
-//        if ($form->isSubmitted() && $form->isValid()) {
-//            $product=$form->getData();
-//
-//            $entityManager=$this->getDoctrine()->getManager();
-//            $entityManager->persist($product);
-//            $entityManager->flush();
-//            return $this->redirectToRoute('admin_product_index');
-//        }
-//
-//        return $this->render('admin/product/edit.html.twig', [
-//            'form' => $form->createView(),
-//            'product' => $product
-//        ]);
-//
-//    }
-
     /**
-     * @Route("/product/{id}/edit", name="product_edit", methods={"GET","POST"})
+     * @Route("/producten/{id}/bewerken", name="product_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Product $product): Response
+    public function productEdit(Request $request, Product $product): Response
     {
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
@@ -228,7 +200,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("product/delete/{id}", name="product_delete", methods={"DELETE"})
+     * @Route("producten/delete/{id}", name="product_delete", methods={"DELETE"})
      */
     public function productDelete(Request $request, Product $product): Response
     {
@@ -243,6 +215,12 @@ class AdminController extends AbstractController
 
 
 
+    // KARPERS CRUD
+
+
+
+
+    //OVERIGE
 
     /**
      * @Route("/image/new", name="new_image")

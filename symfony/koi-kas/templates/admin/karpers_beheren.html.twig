@@ -16,17 +16,22 @@
                     </thead>
                     <tbody>
                     {% for karper in karpers %}
-                    <tr>
-                        <td>{{ karper.naam }}</td>
-                        <td>{{ karper.soort.naam }}</td>
-                        <td>{{ karper.kweker.naam }}</td>
-                        <td>{{ karper.maat.naam }}</td>
-                        <td>{{ karper.leeftijd.naam }}</td>
-                        <td>{{ karper.prijs }}</td>
-                        <td><button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken</button>
-                            <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">Verwijderen</button></td>
-                    </tr>
-                    {% endfor%}
+                        <tr>
+                            <td>{{ karper.naam }}</td>
+                            <td>{{ karper.soort.naam }}</td>
+                            <td>{{ karper.kweker.naam }}</td>
+                            <td>{{ karper.maat.naam }}</td>
+                            <td>{{ karper.leeftijd.naam }}</td>
+                            <td>{{ karper.prijs }}</td>
+                            <td>
+                                <button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken
+                                </button>
+                                <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">
+                                    Verwijderen
+                                </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -41,12 +46,17 @@
                     </thead>
                     <tbody>
                     {% for soort in soorten %}
-                    <tr>
-                        <td>{{ soort.id }}</td>
-                        <td>{{ soort.naam }}</td>
-                        <td><button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken</button>
-                            <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">Verwijderen</button></td>
-                    </tr>
+                        <tr>
+                            <td>{{ soort.id }}</td>
+                            <td>{{ soort.naam }}</td>
+                            <td>
+                                <button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken
+                                </button>
+                                <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">
+                                    Verwijderen
+                                </button>
+                            </td>
+                        </tr>
                     {% endfor %}
                     </tbody>
                 </table>
@@ -62,12 +72,17 @@
                     </thead>
                     <tbody>
                     {% for maat in maten %}
-                    <tr>
-                        <td>{{ maat.id }}</td>
-                        <td>{{ maat.naam }}</td>
-                        <td><button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken</button>
-                            <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">Verwijderen</button></td>
-                    </tr>
+                        <tr>
+                            <td>{{ maat.id }}</td>
+                            <td>{{ maat.naam }}</td>
+                            <td>
+                                <button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken
+                                </button>
+                                <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">
+                                    Verwijderen
+                                </button>
+                            </td>
+                        </tr>
                     {% endfor %}
                     </tbody>
                 </table>
@@ -82,12 +97,17 @@
                     </thead>
                     <tbody>
                     {% for kweker in kwekers %}
-                    <tr>
-                        <td>{{ kweker.id }}</td>
-                        <td>{{ kweker.naam }}</td>
-                        <td><button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken</button>
-                            <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">Verwijderen</button></td>
-                    </tr>
+                        <tr>
+                            <td>{{ kweker.id }}</td>
+                            <td>{{ kweker.naam }}</td>
+                            <td>
+                                <button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken
+                                </button>
+                                <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">
+                                    Verwijderen
+                                </button>
+                            </td>
+                        </tr>
                     {% endfor %}
                     </tbody>
                 </table>
@@ -102,12 +122,17 @@
                     </thead>
                     <tbody>
                     {% for leeftijd in leeftijden %}
-                    <tr>
-                        <td>{{ leeftijd.id }}</td>
-                        <td>{{ leeftijd.naam }}</td>
-                        <td><button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken</button>
-                        <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">Verwijderen</button></td>
-                    </tr>
+                        <tr>
+                            <td>{{ leeftijd.id }}</td>
+                            <td>{{ leeftijd.naam }}</td>
+                            <td>
+                                <button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken
+                                </button>
+                                <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">
+                                    Verwijderen
+                                </button>
+                            </td>
+                        </tr>
                     {% endfor %}
                     </tbody>
                 </table>
