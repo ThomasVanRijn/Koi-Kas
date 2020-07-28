@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <h1>Soort</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Naam</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for soort in soorts %}
+            <tr>
+                <td>{{ soort.id }}</td>
+                <td>{{ soort.naam }}</td>
+                <td>
+                    <a class="btn btn-success" href="{{ path('soort_show', {'id': soort.id}) }}">show</a>
+                    <a class="btn btn-warning" href="{{ path('soort_edit', {'id': soort.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-success" href="{{ path('soort_new') }}">Toevoegen</a>
+{% endblock %}

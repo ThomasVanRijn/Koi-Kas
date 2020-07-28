@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Karper index{% endblock %}
+
+{% block body %}
+    <h1>Karpers</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Naam</th>
+                <th>Maat</th>
+                <th>Prijs</th>
+                <th>Leeftijd</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for karper in karpers %}
+            <tr>
+                <td>{{ karper.id }}</td>
+                <td>{{ karper.naam }}</td>
+                <td>{{ karper.maat }}</td>
+                <td>{{ karper.prijs }}</td>
+                <td>{{ karper.leeftijd }}</td>
+                <td>
+                    <a class="btn btn-success" href="{{ path('karper_show', {'id': karper.id}) }}">show</a>
+                    <a class="btn btn-warning" href="{{ path('karper_edit', {'id': karper.id}) }}">edit</a>
+                    {{ include('karper/_delete_form.html.twig') }}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Geen karpers gevonden</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('karper_new') }}">Toevoegen</a>
+{% endblock %}

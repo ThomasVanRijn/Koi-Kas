@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Karper{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h1>Karper toevoegen</h1>
+
+        {{ include('admin/karper/_form.html.twig') }}
+
+        <a class="btn btn-success mt-2" href="{{ path('admin_karper_index') }}">Terug naar lijst</a>
+    </div>
+{% endblock %}

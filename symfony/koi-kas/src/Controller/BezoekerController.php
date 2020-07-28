@@ -42,15 +42,15 @@ class BezoekerController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/koi-karper/{id}", name="karper_detail", methods={"GET","POST"})
-     */
-    public function karperDetail(Karper $Karper): Response
-    {
-        return $this->render('bezoeker/karper-detail.html.twig', [
-            'karper' => $Karper,
-        ]);
-    }
+//    /**
+//     * @Route("/koi-karper/{id}", name="karper_detail", methods={"GET","POST"})
+//     */
+//    public function karperDetail(Karper $Karper): Response
+//    {
+//        return $this->render('bezoeker/karper-detail.html.twig', [
+//            'karper' => $Karper,
+//        ]);
+//    }
 
 
     //PRODUCTEN

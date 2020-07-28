@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="container">
+        <h1>Karper bewerken</h1>
+
+        {{ include('admin/karper/_form.html.twig', {'button_label': 'Update'}) }}
+
+        <a class="btn btn-success" href="{{ path('admin_karper_index') }}">Terug naar lijst</a>
+
+        {{ include('admin/karper/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

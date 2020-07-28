@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="container">
+        <h1>Soort toevoegen</h1>
+
+        {{ include('admin/soort/_form.html.twig') }}
+
+        <a class="btn btn-success" href="{{ path('admin_karper_index') }}">Terug naar lijst</a>
+    </div>
+{% endblock %}

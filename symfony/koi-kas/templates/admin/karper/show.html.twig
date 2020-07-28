@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="container">
+        <h1>Karper</h1>
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ karper.id }}</td>
+            </tr>
+            <tr>
+                <th>Naam</th>
+                <td>{{ karper.naam }}</td>
+            </tr>
+            <tr>
+                <th>Maat</th>
+                <td>{{ karper.maat }}</td>
+            </tr>
+            <tr>
+                <th>Prijs</th>
+                <td>{{ karper.prijs }}</td>
+            </tr>
+            <tr>
+                <th>Leeftijd</th>
+                <td>{{ karper.leeftijd }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a class="btn btn-success" href="{{ path('admin_karper_index') }}">back to list</a>
+
+        <a class="btn btn-warning" href="{{ path('admin_karper_edit', {'id': karper.id}) }}">edit</a>
+
+        {{ include('admin/karper/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

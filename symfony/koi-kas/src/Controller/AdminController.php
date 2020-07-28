@@ -4,21 +4,21 @@
 namespace App\Controller;
 
 
-
 use App\Entity\Categorie;
 use App\Entity\Image;
 use App\Entity\Karper;
 use App\Entity\Kweker;
-use App\Entity\Leeftijd;
-use App\Entity\Maat;
 use App\Entity\Product;
 use App\Entity\Soort;
 use App\Entity\User;
+use App\Form\KarperType;
+use App\Form\KwekerType;
+use App\Form\SoortType;
 use App\Form\Type\ImageType;
-use App\Form\Type\KarperType;
 use App\Form\Type\ProductType;
-use App\Form\Type\SoortType;
 use App\Form\UserType;
+use App\Repository\KarperRepository;
+use App\Repository\SoortRepository;
 use App\Repository\UserRepository;
 use Psr\Log\LoggerInterface;
 //+
@@ -39,7 +39,8 @@ class AdminController extends AbstractController
     /**
      * @Route("/home", name="home")
      */
-    public function home() {
+    public function home()
+    {
         return $this->render('admin/home.html.twig');
     }
 
@@ -115,7 +116,7 @@ class AdminController extends AbstractController
      */
     public function userDelete(Request $request, User $user): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $user->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($user);
             $entityManager->flush();
@@ -130,7 +131,8 @@ class AdminController extends AbstractController
     /**
      * @Route("/producten/overzicht", name="product_index")
      */
-    public function productIndex() {
+    public function productIndex()
+    {
         $em = $this->getDoctrine()->getManager();
         $producten = $em->getRepository(Product::class)->findAll();
         return $this->render("admin/product/index.html.twig", [
@@ -141,14 +143,15 @@ class AdminController extends AbstractController
     /**
      * @Route("/producten/toevoegen", name="product_new")
      */
-    public function productNew(Request $request) {
+    public function productNew(Request $request)
+    {
         $em = $this->getDoctrine()->getManager();
         $product = new Product();
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $image = $form->get('image')->getData();
-            if($image) {
+            if ($image) {
                 $uri = $product->setUri($image);
 
                 $product->setImage($uri->getUri());
@@ -167,7 +170,8 @@ class AdminController extends AbstractController
     /**
      * @Route("/producten/{id}", name="product_show")
      */
-    public function productShow($id) {
+    public function productShow($id)
+    {
         $em = $this->getDoctrine()->getManager();
         $producten = $em->getRepository(Product::class)->findBy([
             'id' => $id
@@ -204,7 +208,7 @@ class AdminController extends AbstractController
      */
     public function productDelete(Request $request, Product $product): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$product->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $product->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($product);
             $entityManager->flush();
@@ -214,10 +218,232 @@ class AdminController extends AbstractController
     }
 
 
+    /**
+     * @Route("/karpersbeheren", name="karper_index", methods={"GET"})
+     */
+    public function karpersBewerken(): Response
+    {
+        $em = $this->getDoctrine()->getManager();
+        $karpers = $em->getRepository(Karper::class)->findAll();
+        $soorten = $em->getRepository(Soort::class)->findAll();
+        $kwekers = $em->getRepository(Kweker::class)->findAll();
+
+        return $this->render('admin/karpers_beheren.html.twig', [
+            'karpers' => $karpers,
+            'soorten' => $soorten,
+            'kwekers' => $kwekers,
+        ]);
+    }
+
 
     // KARPERS CRUD
 
+    /**
+     * @Route("/karpers/toevoegen", name="karper_new", methods={"GET","POST"})
+     */
+    public function karpersNew(Request $request): Response
+    {
+        $karper = new Karper();
+        $form = $this->createForm(KarperType::class, $karper);
+        $form->handleRequest($request);
 
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($karper);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('admin_karper_index');
+        }
+
+        return $this->render('admin/karper/new.html.twig', [
+            'karper' => $karper,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/karpers/{id}", name="karper_show", methods={"GET"})
+     */
+    public function karpersShow(Karper $karper): Response
+    {
+        return $this->render('admin/karper/show.html.twig', [
+            'karper' => $karper,
+        ]);
+    }
+
+    /**
+     * @Route("/karpers/{id}/bewerken", name="karper_edit", methods={"GET","POST"})
+     */
+    public function karpersEdit(Request $request, Karper $karper): Response
+    {
+        $form = $this->createForm(KarperType::class, $karper);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('admin_karper_index');
+        }
+
+        return $this->render('admin/karper/edit.html.twig', [
+            'karper' => $karper,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/karpers/{id}", name="karper_delete", methods={"DELETE"})
+     */
+    public function karpersDelete(Request $request, Karper $karper): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$karper->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($karper);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('admin_karper_index');
+    }
+
+
+    // SOORTEN CRUD
+
+    /**
+     * @Route("/soorten/toevoegen", name="soort_new", methods={"GET","POST"})
+     */
+    public function soortenNew(Request $request): Response
+    {
+        $soort = new Soort();
+        $form = $this->createForm(SoortType::class, $soort);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($soort);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('admin_karper_index');
+        }
+
+        return $this->render('admin/soort/new.html.twig', [
+            'soort' => $soort,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/soorten/{id}", name="soort_show", methods={"GET"})
+     */
+    public function soortenShow(Soort $soort): Response
+    {
+        return $this->render('admin/soort/show.html.twig', [
+            'soort' => $soort,
+        ]);
+    }
+
+    /**
+     * @Route("/soorten/{id}/bewerken", name="soort_edit", methods={"GET","POST"})
+     */
+    public function soortenEdit(Request $request, Soort $soort): Response
+    {
+        $form = $this->createForm(SoortType::class, $soort);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('admin_karper_index');
+        }
+
+        return $this->render('admin/soort/edit.html.twig', [
+            'soort' => $soort,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/soorten/{id}", name="soort_delete", methods={"DELETE"})
+     */
+    public function soortenDelete(Request $request, Soort $soort): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$soort->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($soort);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('admin_karper_index');
+    }
+
+
+    // KWEKERS CRUD
+
+    /**
+     * @Route("/kwekers/toevoegen", name="kweker_new", methods={"GET","POST"})
+     */
+    public function kwekersNew(Request $request): Response
+    {
+        $kweker = new Kweker();
+        $form = $this->createForm(KwekerType::class, $kweker);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($kweker);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('admin_karper_index');
+        }
+
+        return $this->render('admin/kweker/new.html.twig', [
+            'kweker' => $kweker,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/kwekers/{id}", name="kweker_show", methods={"GET"})
+     */
+    public function kwekersShow(Kweker $kweker): Response
+    {
+        return $this->render('admin/kweker/show.html.twig', [
+            'kweker' => $kweker,
+        ]);
+    }
+
+    /**
+     * @Route("/kwekers/{id}/bewerken", name="kweker_edit", methods={"GET","POST"})
+     */
+    public function kwekerEdit(Request $request, Kweker $kweker): Response
+    {
+        $form = $this->createForm(KwekerType::class, $kweker);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('admin_karper_index');
+        }
+
+        return $this->render('admin/kweker/edit.html.twig', [
+            'kweker' => $kweker,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/kwekers/{id}", name="kweker_delete", methods={"DELETE"})
+     */
+    public function kwekerDelete(Request $request, Kweker $kweker): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$kweker->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($kweker);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('admin_karper_index');
+    }
 
 
     //OVERIGE
@@ -225,16 +451,17 @@ class AdminController extends AbstractController
     /**
      * @Route("/image/new", name="new_image")
      */
-    public function newImage(Request $request) {
+    public function newImage(Request $request)
+    {
         $em = $this->getDoctrine()->getManager();
 
         $image = new Image();
 
         $form = $this->createForm(ImageType::class, $image);
         $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $imageFile = $form->get('image_file_name')->getData();
-            if($imageFile) {
+            if ($imageFile) {
                 $uri = $image->setUri($imageFile);
             }
             $image = $form->getData();
@@ -247,13 +474,14 @@ class AdminController extends AbstractController
         $img = $em->getRepository(Image::class)->find(1);
         $img->setString($img->getBreedte(), $img->getHoogte(), $img->getUri());
         //dd($img->getString());
-        return $this->render('admin/foto.html.twig', [ "form" => $form->createView()]);
+        return $this->render('admin/foto.html.twig', ["form" => $form->createView()]);
     }
 
     /**
      * @Route("/test", name="test")
      */
-    public function test() {
+    public function test()
+    {
 
 
         return $this->render('admin/test.html.twig');
@@ -262,12 +490,13 @@ class AdminController extends AbstractController
     /**
      * @Route("/uploadFile", name="uploadFile")
      */
-    public function uploadFile(Request $request, LoggerInterface $logger): Response {
+    public function uploadFile(Request $request, LoggerInterface $logger): Response
+    {
         $image = $_FILES['image'];
 
-        $target = $this->getParameter('blogImages').'/'.$image['name'];;
-        move_uploaded_file( $image['tmp_name'], $target );
-        $path = '../uploads/blogImages/'.$image['name'];
+        $target = $this->getParameter('blogImages') . '/' . $image['name'];;
+        move_uploaded_file($image['tmp_name'], $target);
+        $path = '../uploads/blogImages/' . $image['name'];
         $response = new Response();
         $json = ['success' => 1, 'file' => ['url' => $path], 'fileName' => $image];
         $response->setContent(json_encode($json));
@@ -283,30 +512,31 @@ class AdminController extends AbstractController
     /**
      * @Route("/filter", name="filterTest")
      */
-    public function filterTest(Request $request) {
+    public function filterTest(Request $request)
+    {
         $em = $this->getDoctrine()->getManager();
         $kwekers = $em->getRepository(Kweker::class)->findAll();
-        $soorten = $em->getRepository(Soort::class)->findAll();
+        $soorten = $em->getRepository(soort::class)->findAll();
         $leeftijden = $em->getRepository(Leeftijd::class)->findAll();
         $maten = $em->getRepository(Maat::class)->findAll();
         $t = $em->getRepository(Karper::class)->findBy([
             'soort' => 1
         ]);
         $qb = $em->getRepository(Karper::class)->createQueryBuilder('kp');
-        if($request->query->getAlnum('soort')) {
+        if ($request->query->getAlnum('soort')) {
             $qb->join('kp.soort', 'soort')
                 ->where('soort.zoekNaam LIKE :soort')->setParameter(':soort', $request->query->getAlnum('soort'));
         }
-        if($request->query->getAlnum('kweker')) {
+        if ($request->query->getAlnum('kweker')) {
             $qb->join('kp.kweker', 'k')
                 ->andWhere('k.zoekNaam LIKE :kweker')->setParameter(':kweker', $request->query->getAlnum('kweker'));
         }
 
-        if($request->query->getAlnum('maat')) {
+        if ($request->query->getAlnum('maat')) {
             $qb->join('kp.maat', 'm')
                 ->andWhere('m.zoekNaam LIKE :maat')->setParameter(':maat', $request->query->getAlnum('maat'));
         }
-        if($request->query->getAlnum('leeftijd')) {
+        if ($request->query->getAlnum('leeftijd')) {
             $qb->join('kp.leeftijd', 'l')
                 ->andWhere('l.zoekNaam LIKE :leeftijd')->setParameter(':leeftijd', $request->query->getAlnum('leeftijd'));
         }
@@ -325,37 +555,17 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/karpers/beheren", name="karpersBeheren")
-     */
-    public function karpersBeheren() {
-        $em = $this->getDoctrine()->getManager();
-
-        $karpers = $em->getRepository(Karper::class)->findAll();
-        $soorten = $em->getRepository(Soort::class)->findAll();
-        $maten = $em->getRepository(Maat::class)->findAll();
-        $kwekers = $em->getRepository(Kweker::class)->findAll();
-        $leeftijden = $em->getRepository(Leeftijd::class)->findAll();
-
-        return $this->render('admin/karpers_beheren.html.twig' , [
-            'karpers' => $karpers,
-            'soorten' => $soorten,
-            'maten' => $maten,
-            'kwekers' => $kwekers,
-            'leeftijden' => $leeftijden
-        ]);
-    }
-
-    /**
      * @Route("/soort/toevoegen", name="soortToevoegen")
      */
-    public function soortToevoegen(Request $request) {
-        $soort = new Soort();
+    public function soortToevoegen(Request $request)
+    {
+        $soort = new soort();
 
         $em = $this->getDoctrine()->getManager();
 
         $form = $this->createForm(SoortType::class, $soort);
         $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $soort = $form->getData();
 
             $em->persist($soort);
@@ -371,13 +581,14 @@ class AdminController extends AbstractController
     /**
      * @Route("/karper/toevoegen", name="karperToevoegen")
      */
-    public function karperToevoegen(Request $request) {
+    public function karperToevoegen(Request $request)
+    {
         $karper = new Karper();
 
         $em = $this->getDoctrine()->getManager();
         $form = $this->createForm(KarperType::class, $karper);
         $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $karper = $form->getData();
             $em->persist($karper);
             $em->flush();
@@ -390,16 +601,16 @@ class AdminController extends AbstractController
 
     }
 
-    /**
-     * @Route("/koi-karper/{id}", name="karper_detail", methods={"GET","POST"})
-     */
-    public function karperDetail(Karper $Karper): Response
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        return $this->render('admin/karper-detail.html.twig', [
-            'karper' => $Karper,
-        ]);
-    }
+//    /**
+//     * @Route("/koi-karper/{id}", name="karper_detail", methods={"GET","POST"})
+//     */
+//    public function karperDetail(Karper $Karper): Response
+//    {
+//        $em = $this->getDoctrine()->getManager();
+//
+//        return $this->render('admin/karper-detail.html.twig', [
+//            'karper' => $Karper,
+//        ]);
+//    }
 
 }

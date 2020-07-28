@@ -1,48 +1,69 @@
 {% extends 'base.html.twig' %}
 {% block main %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <h3>Karpers</h3>
-                <button class="btn btn-primary">Karper toevoegen</button>
+    <div class="container">
+        <hr>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#karpers">Karpers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#soorten">Soorten</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#kwekers">Kwekers</a>
+            </li>
+        </ul>
+
+        <div class="tab-content clearfix">
+            <div class="tab-pane active" id="karpers">
+                <h1>Karpers</h1>
+
                 <table class="table">
                     <thead>
-                    <th>Naam</th>
-                    <th>Soort</th>
-                    <th>Kweker</th>
-                    <th>Maat</th>
-                    <th>Leeftijd</th>
-                    <th>Prijs</th>
+                    <tr>
+                        <th>Id</th>
+                        <th>Naam</th>
+                        <th>Maat</th>
+                        <th>Prijs</th>
+                        <th>Leeftijd</th>
+                        <th>actions</th>
+                    </tr>
                     </thead>
                     <tbody>
                     {% for karper in karpers %}
                         <tr>
+                            <td>{{ karper.id }}</td>
                             <td>{{ karper.naam }}</td>
-                            <td>{{ karper.soort.naam }}</td>
-                            <td>{{ karper.kweker.naam }}</td>
-                            <td>{{ karper.maat.naam }}</td>
-                            <td>{{ karper.leeftijd.naam }}</td>
+                            <td>{{ karper.maat }}</td>
                             <td>{{ karper.prijs }}</td>
+                            <td>{{ karper.leeftijd }}</td>
                             <td>
-                                <button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken
-                                </button>
-                                <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">
-                                    Verwijderen
-                                </button>
+                                <a class="btn btn-success" href="{{ path('admin_karper_show', {'id': karper.id}) }}">Bekijken</a>
+                                <a class="btn btn-warning" href="{{ path('admin_karper_edit', {'id': karper.id}) }}">Bewerken</a>
+                                {{ include('admin/karper/_delete_form.html.twig') }}
                             </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="6">Geen karpers gevonden</td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
+
+                <a class="btn btn-success" href="{{ path('admin_karper_new') }}">Toevoegen</a>
             </div>
 
-            <div class="col-12">
-                <h3>Soorten</h3>
-                <button class="btn btn-primary">Soort toevoegen</button>
+            <div class="tab-pane" id="soorten">
+                <h1>Soort</h1>
+
                 <table class="table">
                     <thead>
-                    <th>Id</th>
-                    <th>Naam</th>
+                    <tr>
+                        <th>Id</th>
+                        <th>Naam</th>
+                        <th>actions</th>
+                    </tr>
                     </thead>
                     <tbody>
                     {% for soort in soorten %}
@@ -50,50 +71,32 @@
                             <td>{{ soort.id }}</td>
                             <td>{{ soort.naam }}</td>
                             <td>
-                                <button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken
-                                </button>
-                                <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">
-                                    Verwijderen
-                                </button>
+                                <a class="btn btn-success" href="{{ path('admin_soort_show', {'id': soort.id}) }}">Bekijken</a>
+                                <a class="btn btn-warning" href="{{ path('admin_soort_edit', {'id': soort.id}) }}">Bewerken</a>
+                                {{ include('admin/soort/_delete_form.html.twig') }}
                             </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="3">Geen soorten gevonden</td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
 
+                <a class="btn btn-success" href="{{ path('admin_soort_new') }}">Toevoegen</a>
             </div>
-            <div class="col-12">
-                <h3>Maten</h3>
-                <button class="btn btn-primary">Maat toevoegen</button>
+
+            <div class="tab-pane" id="kwekers">
+                <h1>Kweker</h1>
+
                 <table class="table">
                     <thead>
-                    <th>Id</th>
-                    <th>Lengte</th>
-                    </thead>
-                    <tbody>
-                    {% for maat in maten %}
-                        <tr>
-                            <td>{{ maat.id }}</td>
-                            <td>{{ maat.naam }}</td>
-                            <td>
-                                <button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken
-                                </button>
-                                <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">
-                                    Verwijderen
-                                </button>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-12">
-                <h3>Kwekers</h3>
-                <button class="btn btn-primary">Kweker toevoegen</button>
-                <table class="table">
-                    <thead>
-                    <th>Id</th>
-                    <th>Naam</th>
+                    <tr>
+                        <th>Id</th>
+                        <th>Naam</th>
+                        <th>actions</th>
+                    </tr>
                     </thead>
                     <tbody>
                     {% for kweker in kwekers %}
@@ -101,41 +104,20 @@
                             <td>{{ kweker.id }}</td>
                             <td>{{ kweker.naam }}</td>
                             <td>
-                                <button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken
-                                </button>
-                                <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">
-                                    Verwijderen
-                                </button>
+                                <a class="btn btn-success" href="{{ path('admin_kweker_show', {'id': kweker.id}) }}">Bekijken</a>
+                                <a class="btn btn-warning" href="{{ path('admin_kweker_edit', {'id': kweker.id}) }}">Bewerken</a>
+                                {{ include('admin/kweker/_delete_form.html.twig') }}
                             </td>
                         </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-12">
-                <h3>Leeftijden</h3>
-                <button class="btn btn-primary">Leeftijd toevoegen</button>
-                <table class="table">
-                    <thead>
-                    <th>Id</th>
-                    <th>Leeftijd</th>
-                    </thead>
-                    <tbody>
-                    {% for leeftijd in leeftijden %}
+                    {% else %}
                         <tr>
-                            <td>{{ leeftijd.id }}</td>
-                            <td>{{ leeftijd.naam }}</td>
-                            <td>
-                                <button style="float:right; margin-right: 2%;" class="btn btn-primary btn-xs">Bewerken
-                                </button>
-                                <button style="float:right; margin-right:2%;" class="btn btn-primary btn-xs">
-                                    Verwijderen
-                                </button>
-                            </td>
+                            <td colspan="3">Geen kwekers gevonden</td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
+
+                <a class="btn btn-success" href="{{ path('admin_kweker_new') }}">Toevoegen</a>
             </div>
         </div>
     </div>
