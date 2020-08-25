@@ -2,49 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1186cccd-033d-4a32-b0aa-b0a8f48b6b20" name="Default Changelist" comment="blog submit naar goede blog index pagina">
-      <change afterPath="$PROJECT_DIR$/src/Controller/KarperController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/KwekerController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SoortController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Kweker.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Soort.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/KarperType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/KwekerType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/SoortType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200728092051.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200728095814.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/karper/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/karper/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/karper/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/karper/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/karper/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/karper/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/kweker/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/kweker/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/kweker/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/kweker/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/kweker/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/kweker/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/soort/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/soort/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/soort/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/soort/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/soort/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/soort/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BezoekerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BezoekerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Karper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Karper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Type/KarperType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Type/KwekerType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Type/SoortType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200404114802.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200404120144.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200404120228.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/LeeftijdRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/MaatRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/karpers_beheren.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/karpers_beheren.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BlogPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BlogPostController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,6 +220,9 @@
       <workItem from="1595783190542" duration="11339000" />
       <workItem from="1595873081918" duration="4250000" />
       <workItem from="1595926171954" duration="13235000" />
+      <workItem from="1596647287398" duration="1728000" />
+      <workItem from="1597685316071" duration="53000" />
+      <workItem from="1597687061012" duration="70000" />
     </task>
     <task id="LOCAL-00001" summary="blog submit naar goede blog index pagina">
       <created>1586001866646</created>

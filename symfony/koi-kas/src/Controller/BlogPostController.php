@@ -15,7 +15,6 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class BlogPostController extends AbstractController
 {
-
     /**
      * @Route("/", name="blog_post_index", methods={"GET"})
      */
